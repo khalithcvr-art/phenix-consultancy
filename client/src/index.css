@@ -399,11 +399,13 @@
   .node-active { border-color: rgb(var(--gold)); box-shadow: 0 0 18px rgb(var(--gold) / 0.5); }
 
   @media (prefers-reduced-motion: reduce) {
-    * {
+    *:not(.animate-marquee-left):not(.animate-marquee-left *) {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
     .reveal { opacity: 1; transform: none; }
+    /* decorative logo/badge scroll stays alive even with reduced motion */
+    .animate-marquee-left { animation-duration: 60s !important; animation-iteration-count: infinite !important; }
   }
 }
