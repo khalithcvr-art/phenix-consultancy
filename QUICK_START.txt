@@ -1,0 +1,56 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                 PHENIX CONSULTANCY - AUTO-DEPLOY SETUP                     ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+📱 LIVE SITE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+URL:        https://superlative-baklava-ca94f8.netlify.app
+Site ID:    7b259824-d3de-4172-b58b-8c1b9b0cf789
+Status:     ✅ LIVE & READY
+
+🔧 NETLIFY CONFIGURATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Build Command:       npm run build
+Publish Directory:   dist/public
+Auto-Deploy:         Ready to configure
+
+📋 TO ENABLE AUTO-DEPLOYS (3 STEPS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: Create GitHub Repository
+   → Go to github.com → Click "New" → Name it "phenix-consultancy"
+   → Make it Public → Create Repository
+
+STEP 2: Push Code to GitHub
+   $ cd /Users/expedia/CLAUDE\ CODE/Phenix-main
+   $ git remote add origin https://github.com/YOUR_USERNAME/phenix-consultancy.git
+   $ git add .
+   $ git commit -m "Initial commit: Phenix website with 6 service pages"
+   $ git branch -M main
+   $ git push -u origin main
+
+STEP 3: Connect GitHub to Netlify
+   → Open: https://app.netlify.com/projects/superlative-baklava-ca94f8/
+   → Site Settings → Build & Deploy → Repository → Connect Repository
+   → Select GitHub → Select your repo → Deploy
+
+✅ DONE! Auto-deploy is now active.
+
+📝 MAKING UPDATES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   $ git add .
+   $ git commit -m "Update description"
+   $ git push origin main
+   → Site automatically deploys! ✨
+
+🎯 KEY URLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Live Site:        https://superlative-baklava-ca94f8.netlify.app
+Netlify Dashboard: https://app.netlify.com/projects/superlative-baklava-ca94f8/
+Deploy History:   https://app.netlify.com/projects/superlative-baklava-ca94f8/deploys
+Build Logs:       https://app.netlify.com/projects/superlative-baklava-ca94f8/deploys
+
+📚 DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Full Setup Guide:  See NETLIFY_SETUP_GUIDE.md in this directory
+

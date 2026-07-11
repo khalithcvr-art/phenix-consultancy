@@ -1,0 +1,426 @@
+import { Button } from "@/components/ui/button";
+import { ArrowRight, CheckCircle, Users, BookOpen, Zap } from "lucide-react";
+
+const syllabusModules = [
+  {
+    module: "Fundamentals & Safety",
+    duration: "0.5–1 day",
+    topics: ["Plasma physics", "Emission basics", "Lab hazards", "Safety protocols"]
+  },
+  {
+    module: "Instrument Components & Sample Introduction",
+    duration: "1 day",
+    topics: ["Nebulizers", "Spray chambers", "Torches", "Tubing selection", "Practical: nebulizer swaps"]
+  },
+  {
+    module: "Software & Operation",
+    duration: "1 day",
+    topics: ["Instrument interface", "Method files", "Sequence setup", "Autosampler use", "Practical: run sequences"]
+  },
+  {
+    module: "Method Development & Calibration",
+    duration: "1 day",
+    topics: ["Wavelength selection", "Calibration strategies", "Standards prep", "Internal standards", "Practical: build curves"]
+  },
+  {
+    module: "Interferences & Corrections",
+    duration: "1 day",
+    topics: ["Spectral vs physical interferences", "Matrix effects", "Background correction", "Practical: challenge samples"]
+  },
+  {
+    module: "Maintenance & Troubleshooting",
+    duration: "1 day",
+    topics: ["Routine cleaning", "Torch alignment", "Nebulizer checks", "Pump tubing replacement", "Practical drills"]
+  },
+  {
+    module: "QA/QC & Performance Monitoring",
+    duration: "1 day",
+    topics: ["Limits of detection", "Drift checks", "Blanks & controls", "Control charts", "Practical: validation report"]
+  },
+  {
+    module: "Advanced Topics (Optional)",
+    duration: "1–2 days",
+    topics: ["Method validation", "Speciation", "ICP-MS crossover", "Automation & high throughput"]
+  }
+];
+
+const trainingDays = [
+  "Instrument fundamentals and safety",
+  "Sample introduction and optimization",
+  "Method development and calibration",
+  "Interferences and performance tuning",
+  "Maintenance and troubleshooting"
+];
+
+const staffRoles = [
+  {
+    role: "Analysts & Technicians",
+    focus: "Daily operation, QC routine, hands-on skills"
+  },
+  {
+    role: "Supervisors",
+    focus: "Method control, traceability, performance monitoring"
+  },
+  {
+    role: "Lab Managers & Specialists",
+    focus: "Workflow design, training oversight, method investigation"
+  }
+];
+
+export default function ICPTraining() {
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <div className="container flex items-center justify-between h-20 mx-auto">
+          <div className="flex items-center gap-3">
+            <a href="/" className="flex items-center gap-3">
+              <img src="/logo.png" alt="Phenix Logo" className="h-16 w-16" />
+              <span className="text-xl font-bold text-foreground">Phenix Consultancy</span>
+            </a>
+          </div>
+          <div className="hidden md:flex items-center gap-8">
+            <a href="/#services" className="text-sm text-foreground/70 hover:text-accent transition-colors">Services</a>
+            <a href="/#about" className="text-sm text-foreground/70 hover:text-accent transition-colors">About</a>
+            <a href="/#contact" className="text-sm text-foreground/70 hover:text-accent transition-colors">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <div
+            className="w-full h-full opacity-40 hover:opacity-55 transition-opacity duration-1200"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundAttachment: "fixed"
+            }}
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-background/40 z-1" />
+
+        <div className="container relative z-10 mx-auto">
+          <div className="max-w-3xl mb-8">
+            <div className="inline-block mb-4">
+              <div className="px-4 py-2 bg-accent/10 border border-accent/30 rounded-full">
+                <p className="text-sm text-accent font-medium">Technical Training</p>
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+              ICP-OES Training & <span className="text-accent">Technical Staff Development</span>
+            </h1>
+            <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
+              Practical training programs that strengthen operator capability, laboratory reliability, and long-term technical independence. Build competent teams that run, maintain, troubleshoot, and validate ICP-OES methods reliably.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div className="gold-divider" />
+
+      {/* Training Overview */}
+      <section className="py-20 md:py-32">
+        <div className="container mx-auto">
+          <div className="mb-16">
+            <div className="inline-block mb-4">
+              <p className="text-sm text-accent font-semibold uppercase tracking-wider">Program Overview</p>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Training Goals & Expected Outcomes
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
+              <BookOpen className="h-8 w-8 text-accent mb-4" />
+              <h3 className="text-2xl font-bold text-foreground mb-4">Training Goals</h3>
+              <ul className="space-y-3 text-foreground/80">
+                <li>• Build competent operators confident in instrument operation</li>
+                <li>• Enable method development and optimization</li>
+                <li>• Develop troubleshooting and maintenance skills</li>
+                <li>• Ensure QA/QC and data integrity practices</li>
+                <li>• Support accreditation and compliance readiness</li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
+              <Zap className="h-8 w-8 text-accent mb-4" />
+              <h3 className="text-2xl font-bold text-foreground mb-4">Expected Outcomes</h3>
+              <ul className="space-y-3 text-foreground/80">
+                <li>✓ Safe instrument operation and maintenance</li>
+                <li>✓ Method development and optimization skills</li>
+                <li>✓ Interference recognition and correction</li>
+                <li>✓ Routine QC and performance monitoring</li>
+                <li>✓ Professional competency certification</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="gold-divider" />
+
+      {/* Modular Syllabus */}
+      <section className="py-20 md:py-32 bg-secondary/30">
+        <div className="container mx-auto">
+          <div className="mb-16">
+            <div className="inline-block mb-4">
+              <p className="text-sm text-accent font-semibold uppercase tracking-wider">Curriculum</p>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Eight-Module Syllabus (Theory + Practical)
+            </h2>
+            <p className="text-lg text-foreground/70 max-w-3xl">
+              Each module combines classroom fundamentals with hands-on exercises using real equipment and precious metals samples. Progressive complexity builds from basics to advanced applications.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {syllabusModules.map((item, index) => (
+              <div key={index} className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 transition-all duration-300">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent/20 border border-accent/40">
+                      <span className="text-lg font-bold text-accent">{index + 1}</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+                      <h3 className="text-2xl font-bold text-foreground">{item.module}</h3>
+                      <div className="px-4 py-1 bg-accent/10 rounded-full w-fit">
+                        <span className="text-sm text-accent font-semibold">{item.duration}</span>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {item.topics.map((topic, idx) => (
+                        <span key={idx} className="px-3 py-1 bg-background/50 rounded-full text-sm text-foreground/70">
+                          {topic}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="gold-divider" />
+
+      {/* Hands-On Exercises */}
+      <section className="py-20 md:py-32">
+        <div className="container mx-auto">
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Hands-On Practical Exercises
+            </h2>
+            <p className="text-lg text-foreground/70 max-w-3xl">
+              Real-world skills developed through supervised practice with actual instruments, samples, and precious metals matrices to ensure confidence and competency.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-foreground mb-6">Practical Drills</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">Prepare standards and precious metal solutions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">Optimize nebulizer flow and plasma settings</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">Identify and correct spectral overlap</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">Repair and replace nebulizer and pump tubing</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">Perform performance check and calculate MDL</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-foreground mb-6">Assessment</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">Short quizzes after theory modules</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">Practical competency checklist & sign-off</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">Final practical test (run unknowns, produce report)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">Professional competency certificate</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="gold-divider" />
+
+      {/* Staff Roles */}
+      <section className="py-20 md:py-32 bg-secondary/30">
+        <div className="container mx-auto">
+          <div className="mb-16">
+            <div className="inline-block mb-4">
+              <p className="text-sm text-accent font-semibold uppercase tracking-wider">Tailored Learning</p>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Role-Based Training Paths
+            </h2>
+            <p className="text-lg text-foreground/70 max-w-3xl">
+              Different team members need different depth of knowledge. We customize training to match each role's responsibilities and career path.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {staffRoles.map((item, index) => (
+              <div key={index} className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
+                <Users className="h-8 w-8 text-accent mb-4" />
+                <h3 className="text-2xl font-bold text-foreground mb-3">{item.role}</h3>
+                <p className="text-foreground/70 leading-relaxed">{item.focus}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="gold-divider" />
+
+      {/* Delivery Options */}
+      <section className="py-20 md:py-32">
+        <div className="container mx-auto">
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Training Delivery Options
+            </h2>
+            <p className="text-lg text-foreground/70 max-w-3xl">
+              Choose the delivery format that best fits your team's availability, learning preferences, and operational constraints.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Public Vendor Courses</h3>
+              <p className="text-foreground/70 mb-6 leading-relaxed">
+                Manufacturer-specific training at vendor sites. Fast, structured, and certificate-included. 1–5 days.
+              </p>
+              <p className="text-sm text-accent font-semibold">Best for: Instrument-specific deep dives</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
+              <h3 className="text-2xl font-bold text-foreground mb-4">On-Site Customized Training</h3>
+              <p className="text-foreground/70 mb-6 leading-relaxed">
+                Tailored program delivered at your lab using your equipment, samples, and procedures. 2–6 weeks.
+              </p>
+              <p className="text-sm text-accent font-semibold">Best for: Operational relevance & team cohesion</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Hybrid Approach</h3>
+              <p className="text-foreground/70 mb-6 leading-relaxed">
+                Combine vendor fundamentals with site-specific advanced topics and method validation. Flexible.
+              </p>
+              <p className="text-sm text-accent font-semibold">Best for: Maximum efficiency & depth</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="gold-divider" />
+
+      {/* Key Skills */}
+      <section className="py-20 md:py-32 bg-secondary/30">
+        <div className="container mx-auto">
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Skills You'll Develop
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold text-foreground mb-6">Technical Skills</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">Safe instrument operation and startup</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">Sample introduction and optimization</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">Method development and validation</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">Troubleshooting and maintenance</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold text-foreground mb-6">Professional Skills</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">QA/QC and performance monitoring</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">Data documentation and integrity</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">Accreditation and compliance readiness</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <span className="text-foreground/80">Professional certification and competency</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="gold-divider" />
+
+      {/* CTA Section */}
+      <section className="py-20 md:py-32 bg-secondary/30">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Build a trained, competent team
+          </h2>
+          <p className="text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Phenix Consultancy designs and delivers customized ICP-OES training programs that build operator confidence, lab reliability, and technical independence for your team.
+          </p>
+          <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-base font-semibold rounded-lg transition-all hover:scale-105 active:scale-95">
+            Design Training Program <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </div>
+      </section>
+    </div>
+  );
+}
