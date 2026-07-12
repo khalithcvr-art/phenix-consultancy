@@ -716,9 +716,9 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <Reveal>
               <div className="glass rounded-3xl p-10 md:p-12 hover:border-accent/30 transition-colors duration-500">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-20 h-20 btn-gold rounded-2xl flex items-center justify-center">
-                    <span className="font-serif-display text-2xl font-bold text-background">SN</span>
+                <div className="flex items-center gap-5 mb-8">
+                  <div className="clip-img shine-loop relative w-20 h-20 rounded-2xl overflow-hidden border border-accent/30 flex-shrink-0" style={{ "--d": "200ms" } as React.CSSProperties}>
+                    <img src="/subash-leader.jpg" alt="Mr. Subash Nediyodath" className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
                   </div>
                   <p className="text-xs text-accent font-semibold uppercase tracking-[0.25em]">Leadership</p>
                 </div>
