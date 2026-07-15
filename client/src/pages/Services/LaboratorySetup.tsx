@@ -83,7 +83,7 @@ export default function LaboratorySetup() {
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div
-            className="w-full h-full opacity-40 transition-all duration-1000"
+            className="w-full h-full opacity-100"
             style={{
               backgroundImage: "url('https://i.pinimg.com/1200x/7e/18/d7/7e18d79770545abd178235a0218950ce.jpg')",
               backgroundSize: "cover",
