@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { ArrowRight, Zap, Users, Shield, Target, Star, CheckCircle2, Award, FlaskConical, TrendingUp, ClipboardList, GraduationCap, Trophy, Menu, X, Check } from "lucide-react";
+import { ArrowRight, Zap, Users, Shield, Target, Star, CircleCheck as CheckCircle2, Award, FlaskConical, TrendingUp, ClipboardList, GraduationCap, Trophy, Menu, X, Check } from "lucide-react";
 
 const reducedMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -186,7 +186,7 @@ const expertiseData = [
   { title: "Precious Metal Refinery Project Management", description: "Structured project guidance from concept to commissioning, with disciplined coordination between technical, operational, and investment stakeholders.", Icon: ClipboardList, href: "/services/project-management", backgroundImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" },
   { title: "Procurement Consulting & Technical Evaluation", description: "Vendor review, equipment selection, specification comparison, calibration standards procurement, and investment-grade purchasing support.", Icon: CheckCircle2, href: "/services/procurement-consulting", backgroundImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" },
   { title: "Production & Chemical Process Optimization", description: "Production process planning, chemical process improvement, troubleshooting, and operational performance enhancement for existing refineries.", Icon: TrendingUp, href: "/services/process-optimization", backgroundImage: "https://images.unsplash.com/photo-1530587191325-3db8b08c0c31?w=600&q=80" },
-  { title: "Laboratory Setup & Development", description: "Laboratory planning, standard practices, ISO method validation, reference material production, and reliable analytical workflows.", Icon: FlaskConical, href: "/services/laboratory-setup", backgroundImage: "https://images.unsplash.com/photo-1576091160550-112173f31c77?w=600&q=80" },
+  { title: "Laboratory Setup & Development", description: "Laboratory planning, standard practices, ISO method validation, reference material production, and reliable analytical workflows.", Icon: FlaskConical, href: "/services/laboratory-setup", backgroundImage: "https://i.pinimg.com/1200x/90/55/0a/90550a05f85e1e092ce5b2f61eade42b.jpg" },
   { title: "ICP-OES Training & Technical Staff Development", description: "Practical training programs that strengthen operator capability, laboratory reliability, and long-term technical independence.", Icon: GraduationCap, href: "/services/icp-training", backgroundImage: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=600&q=80" },
   { title: "World-class Standards & Continuous Improvement", description: "Tailor-made consulting for reliable operations, cost-effective solutions, and refinery systems built for sustainable growth.", Icon: Trophy, href: "/services/world-class-standards", backgroundImage: "https://images.unsplash.com/photo-1610375461246-83df859d849d?w=600&q=80" },
 ];
@@ -549,7 +549,7 @@ export default function Home() {
             {expertiseData.map((s, i) => (
               <Reveal key={s.href} delay={(i % 3) * 120} flip>
                 <TiltCard href={s.href} className="service-card group block h-full bg-card/60 border border-border/40 p-7 overflow-hidden">
-                  <div className="duotone absolute inset-0 opacity-[0.16] group-hover:opacity-30 transition-opacity duration-700 z-0" style={{ backgroundImage: `url('${s.backgroundImage}')`, backgroundSize: "cover", backgroundPosition: "center" }} />
+                  <div className="duotone absolute inset-0 opacity-100 transition-opacity duration-700 z-0" style={{ backgroundImage: `url('${s.backgroundImage}')`, backgroundSize: "cover", backgroundPosition: "center" }} />
                   <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/60 to-background/30 z-[1]" />
                   <div className="card-shine" />
                   <div className="relative z-10 flex flex-col h-full">
