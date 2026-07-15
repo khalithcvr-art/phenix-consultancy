@@ -11,6 +11,7 @@ import ProcessOptimization from "./pages/Services/ProcessOptimization";
 import LaboratorySetup from "./pages/Services/LaboratorySetup";
 import ICPTraining from "./pages/Services/ICPTraining";
 import WorldclassStandards from "./pages/Services/WorldclassStandards";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 
 function Router() {
@@ -45,6 +46,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <WhatsAppButton />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
