@@ -91,7 +91,7 @@ export default function WorldclassStandards() {
           <div
             className="w-full h-full opacity-100"
             style={{
-              backgroundImage: "url('https://i.pinimg.com/736x/54/60/84/546084fdc58656a65d0af0ac45495227.jpg')",
+              backgroundImage: "url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=2000&q=95')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundAttachment: "fixed"

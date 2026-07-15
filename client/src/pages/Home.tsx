@@ -183,12 +183,12 @@ function Magnetic({ children, className = "" }: { children: React.ReactNode; cla
 
 /* ---------- data ---------- */
 const expertiseData = [
-  { title: "Precious Metal Refinery Project Management", description: "Structured project guidance from concept to commissioning, with disciplined coordination between technical, operational, and investment stakeholders.", Icon: ClipboardList, href: "/services/project-management", backgroundImage: "https://i.pinimg.com/1200x/0d/6c/70/0d6c70683a221e12b937083d54c0b513.jpg" },
-  { title: "Procurement Consulting & Technical Evaluation", description: "Vendor review, equipment selection, specification comparison, calibration standards procurement, and investment-grade purchasing support.", Icon: CheckCircle2, href: "/services/procurement-consulting", backgroundImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" },
-  { title: "Production & Chemical Process Optimization", description: "Production process planning, chemical process improvement, troubleshooting, and operational performance enhancement for existing refineries.", Icon: TrendingUp, href: "/services/process-optimization", backgroundImage: "https://i.pinimg.com/736x/ca/04/11/ca04111ddfaadeb9c6a86d52cf6b5f4c.jpg" },
-  { title: "Laboratory Setup & Development", description: "Laboratory planning, standard practices, ISO method validation, reference material production, and reliable analytical workflows.", Icon: FlaskConical, href: "/services/laboratory-setup", backgroundImage: "https://i.pinimg.com/1200x/90/55/0a/90550a05f85e1e092ce5b2f61eade42b.jpg" },
-  { title: "ICP-OES Training & Technical Staff Development", description: "Practical training programs that strengthen operator capability, laboratory reliability, and long-term technical independence.", Icon: GraduationCap, href: "/services/icp-training", backgroundImage: "https://i.pinimg.com/1200x/4c/e0/1e/4ce01ead62ed926bf9d39c0f47fc772c.jpg" },
-  { title: "World-class Standards & Continuous Improvement", description: "Tailor-made consulting for reliable operations, cost-effective solutions, and refinery systems built for sustainable growth.", Icon: Trophy, href: "/services/world-class-standards", backgroundImage: "https://i.pinimg.com/736x/79/ea/53/79ea539fe06ff42b53e19a1de5ea5417.jpg" },
+  { title: "Precious Metal Refinery Project Management", description: "Structured project guidance from concept to commissioning, with disciplined coordination between technical, operational, and investment stakeholders.", Icon: ClipboardList, href: "/services/project-management", backgroundImage: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&q=95" },
+  { title: "Procurement Consulting & Technical Evaluation", description: "Vendor review, equipment selection, specification comparison, calibration standards procurement, and investment-grade purchasing support.", Icon: CheckCircle2, href: "/services/procurement-consulting", backgroundImage: "https://images.unsplash.com/photo-1553531088-d9b66f66f89f?w=1200&q=95" },
+  { title: "Production & Chemical Process Optimization", description: "Production process planning, chemical process improvement, troubleshooting, and operational performance enhancement for existing refineries.", Icon: TrendingUp, href: "/services/process-optimization", backgroundImage: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&q=95" },
+  { title: "Laboratory Setup & Development", description: "Laboratory planning, standard practices, ISO method validation, reference material production, and reliable analytical workflows.", Icon: FlaskConical, href: "/services/laboratory-setup", backgroundImage: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=1200&q=95" },
+  { title: "ICP-OES Training & Technical Staff Development", description: "Practical training programs that strengthen operator capability, laboratory reliability, and long-term technical independence.", Icon: GraduationCap, href: "/services/icp-training", backgroundImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=95" },
+  { title: "World-class Standards & Continuous Improvement", description: "Tailor-made consulting for reliable operations, cost-effective solutions, and refinery systems built for sustainable growth.", Icon: Trophy, href: "/services/world-class-standards", backgroundImage: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=1200&q=95" },
 ];
 
 const impactStats = [
@@ -460,7 +460,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="kenburns w-full h-full opacity-50" style={{ backgroundImage: "url('https://phenix-consultancy.vercel.app/assets/hero_background.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
+          <div className="kenburns w-full h-full opacity-100" style={{ backgroundImage: "url('https://phenix-consultancy.vercel.app/assets/hero_background.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/20" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
         </div>
