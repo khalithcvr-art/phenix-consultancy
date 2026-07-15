@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Shield, TrendingUp, Award } from "lucide-react";
+import { ArrowRight, CircleCheck as CheckCircle, Shield, TrendingUp, Award } from "lucide-react";
 
 const coreStandards = [
   {
@@ -89,9 +89,9 @@ export default function WorldclassStandards() {
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div
-            className="w-full h-full opacity-40 animate-pulse"
+            className="w-full h-full opacity-100"
             style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80')",
+              backgroundImage: "url('https://i.pinimg.com/736x/54/60/84/546084fdc58656a65d0af0ac45495227.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundAttachment: "fixed"
