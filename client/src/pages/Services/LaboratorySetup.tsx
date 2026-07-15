@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Beaker, Zap, Shield } from "lucide-react";
+import { ArrowRight, CircleCheck as CheckCircle, Beaker, Zap, Shield } from "lucide-react";
 
 const coreFunctions = [
   "Gold, silver, platinum, palladium, rhodium testing",
@@ -83,9 +83,9 @@ export default function LaboratorySetup() {
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div
-            className="w-full h-full opacity-40 group-hover:opacity-60 transition-all duration-1000"
+            className="w-full h-full opacity-40 transition-all duration-1000"
             style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1576091160550-112173f31c77?w=1200&q=80')",
+              backgroundImage: "url('https://i.pinimg.com/1200x/7e/18/d7/7e18d79770545abd178235a0218950ce.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundAttachment: "fixed"
