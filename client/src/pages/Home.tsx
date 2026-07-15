@@ -185,7 +185,7 @@ function Magnetic({ children, className = "" }: { children: React.ReactNode; cla
 const expertiseData = [
   { title: "Precious Metal Refinery Project Management", description: "Structured project guidance from concept to commissioning, with disciplined coordination between technical, operational, and investment stakeholders.", Icon: ClipboardList, href: "/services/project-management", backgroundImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" },
   { title: "Procurement Consulting & Technical Evaluation", description: "Vendor review, equipment selection, specification comparison, calibration standards procurement, and investment-grade purchasing support.", Icon: CheckCircle2, href: "/services/procurement-consulting", backgroundImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" },
-  { title: "Production & Chemical Process Optimization", description: "Production process planning, chemical process improvement, troubleshooting, and operational performance enhancement for existing refineries.", Icon: TrendingUp, href: "/services/process-optimization", backgroundImage: "https://images.unsplash.com/photo-1530587191325-3db8b08c0c31?w=600&q=80" },
+  { title: "Production & Chemical Process Optimization", description: "Production process planning, chemical process improvement, troubleshooting, and operational performance enhancement for existing refineries.", Icon: TrendingUp, href: "/services/process-optimization", backgroundImage: "https://i.pinimg.com/736x/ca/04/11/ca04111ddfaadeb9c6a86d52cf6b5f4c.jpg" },
   { title: "Laboratory Setup & Development", description: "Laboratory planning, standard practices, ISO method validation, reference material production, and reliable analytical workflows.", Icon: FlaskConical, href: "/services/laboratory-setup", backgroundImage: "https://i.pinimg.com/1200x/90/55/0a/90550a05f85e1e092ce5b2f61eade42b.jpg" },
   { title: "ICP-OES Training & Technical Staff Development", description: "Practical training programs that strengthen operator capability, laboratory reliability, and long-term technical independence.", Icon: GraduationCap, href: "/services/icp-training", backgroundImage: "https://i.pinimg.com/1200x/4c/e0/1e/4ce01ead62ed926bf9d39c0f47fc772c.jpg" },
   { title: "World-class Standards & Continuous Improvement", description: "Tailor-made consulting for reliable operations, cost-effective solutions, and refinery systems built for sustainable growth.", Icon: Trophy, href: "/services/world-class-standards", backgroundImage: "https://i.pinimg.com/736x/79/ea/53/79ea539fe06ff42b53e19a1de5ea5417.jpg" },
@@ -276,7 +276,6 @@ function Methodology() {
   const active = Math.min(methodology.length - 1, Math.floor(prog * methodology.length));
   return (
     <div ref={wrap} className="relative max-w-3xl mx-auto">
-      {/* dim base track + gold fill that draws with scroll */}
       <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px md:-translate-x-px bg-border/60" />
       <div className="absolute left-6 md:left-1/2 top-0 w-px md:-translate-x-px bg-gradient-to-b from-accent/80 to-accent transition-[height] duration-300 ease-out" style={{ height: `${prog * 100}%`, boxShadow: "0 0 12px rgb(212 165 71 / 0.5)" }} />
       {methodology.map((m, i) => {
@@ -408,7 +407,6 @@ export default function Home() {
   useEffect(() => {
     const fn = () => {
       setScrolled(window.scrollY > 40);
-      // about columns parallax
       const el = aboutImgs.current;
       if (el && !reducedMotion()) {
         const r = el.getBoundingClientRect();
@@ -523,7 +521,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Impact Dashboard — counters with gold progress rings */}
+      {/* Impact Dashboard */}
       <section className="relative py-16 border-y border-border/40 bg-secondary/20">
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
@@ -536,7 +534,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services — spotlight grid, duotone images, flip-up reveal */}
+      {/* Services */}
       <section id="services" className="py-24 md:py-32 relative">
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-accent/5 blur-[120px] pointer-events-none" />
         <div className="container mx-auto">
@@ -571,7 +569,7 @@ export default function Home() {
 
       <div className="gold-divider" />
 
-      {/* Methodology — scroll-driven line draw */}
+      {/* Methodology */}
       <section id="methodology" className="py-24 md:py-32 bg-secondary/20">
         <div className="container mx-auto">
           <SectionHead
@@ -585,7 +583,7 @@ export default function Home() {
 
       <div className="gold-divider" />
 
-      {/* About — clip-path image reveals + column parallax */}
+      {/* About */}
       <section id="about" className="py-24 md:py-32 overflow-hidden">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -642,7 +640,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Certifications — infinite marquee with sequential shine */}
+      {/* Certifications */}
       <section className="py-16 border-y border-border/40 bg-secondary/20 overflow-hidden">
         <Reveal className="text-center mb-10">
           <p className="text-xs text-accent font-semibold uppercase tracking-[0.25em]">Standards & Certifications We Work To</p>
@@ -660,7 +658,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Industries — spring-pop pills */}
+      {/* Industries */}
       <section className="py-24 md:py-32">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -686,7 +684,7 @@ export default function Home() {
 
       <div className="gold-divider" />
 
-      {/* Why Us — self-drawing icons, sequential card light-up */}
+      {/* Why Us */}
       <section id="why-us" className="py-24 md:py-32 bg-secondary/20">
         <div className="container mx-auto">
           <SectionHead eyebrow="Why Choose Us" title="Trusted Expertise, Proven Results" />
@@ -710,7 +708,7 @@ export default function Home() {
 
       <div className="gold-divider" />
 
-      {/* Leadership — ring counter + animated skill bars */}
+      {/* Leadership */}
       <section id="leadership" className="py-24 md:py-32">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -752,7 +750,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials — center-focus marquee, staggered stars */}
+      {/* Testimonials */}
       <section className="py-24 md:py-32 bg-secondary/20 overflow-hidden">
         <div className="container mx-auto px-4">
           <SectionHead
@@ -780,7 +778,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer — line draw + logo shine */}
+      {/* Footer */}
       <footer className="bg-secondary/40 py-16 relative">
         <Reveal className="absolute top-0 left-0 right-0">
           <div className="footer-line h-px bg-gradient-to-r from-transparent via-accent/70 to-transparent" />
