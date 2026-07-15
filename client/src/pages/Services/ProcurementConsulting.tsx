@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, TrendingUp, BarChart3, Shield, Zap } from "lucide-react";
+import { ArrowRight, CircleCheck as CheckCircle, TrendingUp, ChartBar as BarChart3, Shield, Zap } from "lucide-react";
 
 const services = [
   {
@@ -87,7 +87,7 @@ export default function ProcurementConsulting() {
           <div
             className="w-full h-full opacity-40 hover:opacity-50 transition-opacity duration-1000"
             style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80')",
+              backgroundImage: "url('https://i.pinimg.com/736x/c6/b4/34/c6b434d082daf34cbb8deea330c9ddfd.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundAttachment: "fixed"
