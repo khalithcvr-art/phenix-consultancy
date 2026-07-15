@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Zap, TrendingUp, Target } from "lucide-react";
+import { ArrowRight, CircleCheck as CheckCircle, Zap, TrendingUp, Target } from "lucide-react";
 
 const optimizationSteps = [
   {
@@ -68,9 +68,9 @@ export default function ProcessOptimization() {
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div
-            className="w-full h-full opacity-40 animate-[float_6s_ease-in-out_infinite]"
+            className="w-full h-full opacity-100"
             style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1530587191325-3db8b08c0c31?w=1200&q=80')",
+              backgroundImage: "url('https://i.pinimg.com/1200x/cc/8f/05/cc8f057c96696c90f0585eda233b35b5.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundAttachment: "fixed"
