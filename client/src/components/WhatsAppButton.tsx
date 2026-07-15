@@ -5,7 +5,7 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      className="fixed bottom-8 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-2xl"
+      className="fixed bottom-8 left-6 z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-2xl"
       style={{ backgroundColor: "#25D366" }}
     >
       {/* Breathing rings */}
