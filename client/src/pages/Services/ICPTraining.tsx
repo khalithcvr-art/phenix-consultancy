@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Users, BookOpen, Zap } from "lucide-react";
+import { ArrowRight, CircleCheck as CheckCircle, Users, BookOpen, Zap } from "lucide-react";
 
 const syllabusModules = [
   {
@@ -91,9 +91,9 @@ export default function ICPTraining() {
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div
-            className="w-full h-full opacity-40 hover:opacity-55 transition-opacity duration-1200"
+            className="w-full h-full opacity-100 transition-opacity duration-1200"
             style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80')",
+              backgroundImage: "url('https://i.pinimg.com/736x/4e/76/2e/4e762e86e4f803ae83c4a0fa0e3621d5.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundAttachment: "fixed"
