@@ -125,6 +125,16 @@ export default function ProjectManagement() {
               backgroundAttachment: "fixed"
             }}
           />
+          <div
+            className="absolute inset-0 opacity-100"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=95')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundAttachment: "fixed",
+              mixBlendMode: "overlay"
+            }}
+          />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-background/40 z-1" />
 

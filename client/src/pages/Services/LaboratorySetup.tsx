@@ -85,7 +85,7 @@ export default function LaboratorySetup() {
           <div
             className="w-full h-full opacity-100"
             style={{
-              backgroundImage: "url('https://i.pinimg.com/1200x/7e/18/d7/7e18d79770545abd178235a0218950ce.jpg')",
+              backgroundImage: "url('https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=2000&q=95')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundAttachment: "fixed"

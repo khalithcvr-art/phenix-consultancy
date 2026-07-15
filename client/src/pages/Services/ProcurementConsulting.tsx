@@ -87,7 +87,7 @@ export default function ProcurementConsulting() {
           <div
             className="w-full h-full opacity-100"
             style={{
-              backgroundImage: "url('https://i.pinimg.com/1200x/c6/b4/34/c6b434d082daf34cbb8deea330c9ddfd.jpg')",
+              backgroundImage: "url('https://images.unsplash.com/photo-1553531088-d9b66f66f89f?w=2000&q=95')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundAttachment: "fixed"
