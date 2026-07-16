@@ -711,39 +711,65 @@ export default function Home() {
       {/* Leadership */}
       <section id="leadership" className="py-24 md:py-32">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             <Reveal>
-              <div className="glass rounded-3xl p-10 md:p-12 hover:border-accent/30 transition-colors duration-500">
-                <div className="flex items-center gap-5 mb-8">
-                  <div className="clip-img shine-loop relative w-20 h-20 rounded-2xl overflow-hidden border border-accent/30 flex-shrink-0" style={{ "--d": "200ms" } as React.CSSProperties}>
-                    <img src="/subash-leader.jpg" alt="Mr. Subash Nediyodath" className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
-                  </div>
-                  <p className="text-xs text-accent font-semibold uppercase tracking-[0.25em]">Leadership</p>
+              <div className="relative rounded-3xl overflow-hidden group h-[500px] md:h-[550px]">
+                <div className="absolute inset-0">
+                  <img src="/subash-leader.jpg" alt="Mr. Subash Nediyodath" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
-                <h3 className="font-serif-display text-3xl font-bold mb-4">Mr. Subash Nediyodath</h3>
-                <p className="text-foreground/65 mb-8 leading-relaxed">Senior precious metal refinery, laboratory, procurement, and operations consulting leader.</p>
-                <div className="bg-background/50 border border-border/40 rounded-xl p-6 flex items-center gap-5">
-                  <RingStat value={16} suffix="+" size={80} />
-                  <p className="text-sm text-foreground/60">Years of relevant industry experience</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10" />
+                <div className="absolute inset-0 bg-gradient-to-r from-background/60 to-background/20" />
+
+                <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12 z-10">
+                  <div className="mb-8">
+                    <div className="inline-block mb-4">
+                      <p className="text-xs text-accent font-semibold uppercase tracking-[0.25em] bg-accent/20 border border-accent/40 rounded-full px-4 py-2">Leadership</p>
+                    </div>
+                    <h3 className="font-serif-display text-4xl md:text-5xl font-bold text-foreground mb-3">Mr. Subash Nediyodath</h3>
+                    <p className="text-lg text-foreground/90 font-medium">Senior Precious Metals & Operations Expert</p>
+                  </div>
+
+                  <div className="glass rounded-2xl p-6 border border-accent/30">
+                    <div className="flex items-center gap-6">
+                      <RingStat value={16} suffix="+" size={90} />
+                      <div>
+                        <p className="text-sm text-foreground/70 leading-relaxed">Years of relevant industry experience in refinery operations, laboratory systems, and process optimization</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Reveal>
+
             <Reveal delay={150}>
-              <h2 className="text-4xl md:text-5xl mb-6">Experience that connects technical decisions with business outcomes.</h2>
-              <p className="text-lg text-foreground/60 mb-5 leading-relaxed">With 16 years of relevant experience, Mr. Subash Nediyodath brings deep practical understanding of precious metal refinery operations, laboratory systems, procurement evaluation, technical troubleshooting, staff training, and performance improvement.</p>
-              <p className="text-lg text-foreground/60 mb-8 leading-relaxed">His leadership approach is built on precision, integrity, and measurable improvement — helping clients make confident decisions, avoid costly mistakes, and build refinery systems that can scale with trust.</p>
-              <div className="space-y-5">
-                {skills.map(([label, w], i) => (
-                  <div key={label}>
-                    <div className="flex justify-between text-sm mb-1.5">
-                      <span className="font-semibold">{label}</span>
-                      <span className="text-accent font-semibold">{w}%</span>
-                    </div>
-                    <div className="h-1.5 rounded-full bg-border/50 overflow-hidden">
-                      <div className="bar-fill h-full rounded-full bg-gradient-to-r from-accent/70 to-accent" style={{ "--w": `${w}%`, "--d": `${i * 150}ms` } as React.CSSProperties} />
-                    </div>
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Experience that connects technical decisions with business outcomes.</h2>
+                  <p className="text-lg text-foreground/70 leading-relaxed">With 16 years of proven expertise, Mr. Subash Nediyodath brings deep practical understanding of precious metal refinery operations, laboratory systems, procurement evaluation, technical troubleshooting, staff training, and performance improvement.</p>
+                </div>
+
+                <div className="glass rounded-2xl p-8 border border-border/40">
+                  <p className="text-foreground/80 leading-relaxed mb-6">His leadership approach is built on precision, integrity, and measurable improvement — helping clients make confident decisions, avoid costly mistakes, and build refinery systems that can scale with trust.</p>
+                  <div className="space-y-5">
+                    {skills.map(([label, w], i) => (
+                      <div key={label}>
+                        <div className="flex justify-between text-sm mb-2">
+                          <span className="font-semibold text-foreground">{label}</span>
+                          <span className="text-accent font-bold">{w}%</span>
+                        </div>
+                        <div className="h-2 rounded-full bg-border/50 overflow-hidden">
+                          <div className="bar-fill h-full rounded-full bg-gradient-to-r from-accent/70 to-accent" style={{ "--w": `${w}%`, "--d": `${i * 150}ms` } as React.CSSProperties} />
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                <a href="#contact">
+                  <Button className="btn-gold w-full px-8 py-6 text-base font-semibold rounded-xl transition-transform hover:scale-105 active:scale-95">
+                    Work With Our Expert <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </a>
               </div>
             </Reveal>
           </div>
