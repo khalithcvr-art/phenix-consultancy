@@ -1,56 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CircleCheck as CheckCircle, Users, BookOpen, Zap } from "lucide-react";
 
-const syllabusModules = [
-  {
-    module: "Fundamentals & Safety",
-    duration: "0.5–1 day",
-    topics: ["Plasma physics", "Emission basics", "Lab hazards", "Safety protocols"]
-  },
-  {
-    module: "Instrument Components & Sample Introduction",
-    duration: "1 day",
-    topics: ["Nebulizers", "Spray chambers", "Torches", "Tubing selection", "Practical: nebulizer swaps"]
-  },
-  {
-    module: "Software & Operation",
-    duration: "1 day",
-    topics: ["Instrument interface", "Method files", "Sequence setup", "Autosampler use", "Practical: run sequences"]
-  },
-  {
-    module: "Method Development & Calibration",
-    duration: "1 day",
-    topics: ["Wavelength selection", "Calibration strategies", "Standards prep", "Internal standards", "Practical: build curves"]
-  },
-  {
-    module: "Interferences & Corrections",
-    duration: "1 day",
-    topics: ["Spectral vs physical interferences", "Matrix effects", "Background correction", "Practical: challenge samples"]
-  },
-  {
-    module: "Maintenance & Troubleshooting",
-    duration: "1 day",
-    topics: ["Routine cleaning", "Torch alignment", "Nebulizer checks", "Pump tubing replacement", "Practical drills"]
-  },
-  {
-    module: "QA/QC & Performance Monitoring",
-    duration: "1 day",
-    topics: ["Limits of detection", "Drift checks", "Blanks & controls", "Control charts", "Practical: validation report"]
-  },
-  {
-    module: "Advanced Topics (Optional)",
-    duration: "1–2 days",
-    topics: ["Method validation", "Speciation", "ICP-MS crossover", "Automation & high throughput"]
-  }
-];
-
-const trainingDays = [
-  "Instrument fundamentals and safety",
-  "Sample introduction and optimization",
-  "Method development and calibration",
-  "Interferences and performance tuning",
-  "Maintenance and troubleshooting"
-];
 
 const staffRoles = [
   {
@@ -161,55 +111,6 @@ export default function ICPTraining() {
         </div>
       </section>
 
-      <div className="gold-divider" />
-
-      {/* Modular Syllabus */}
-      <section className="py-20 md:py-32 bg-secondary/30">
-        <div className="container mx-auto">
-          <div className="mb-16">
-            <div className="inline-block mb-4">
-              <p className="text-sm text-accent font-semibold uppercase tracking-wider">Curriculum</p>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Eight-Module Syllabus (Theory + Practical)
-            </h2>
-            <p className="text-lg text-foreground/70 max-w-3xl">
-              Each module combines classroom fundamentals with hands-on exercises using real equipment and precious metals samples. Progressive complexity builds from basics to advanced applications.
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            {syllabusModules.map((item, index) => (
-              <div key={index} className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 transition-all duration-300">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent/20 border border-accent/40">
-                      <span className="text-lg font-bold text-accent">{index + 1}</span>
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
-                      <h3 className="text-2xl font-bold text-foreground">{item.module}</h3>
-                      <div className="px-4 py-1 bg-accent/10 rounded-full w-fit">
-                        <span className="text-sm text-accent font-semibold">{item.duration}</span>
-                      </div>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {item.topics.map((topic, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-background/50 rounded-full text-sm text-foreground/70">
-                          {topic}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="gold-divider" />
 
       {/* Hands-On Exercises */}
       <section className="py-20 md:py-32">
