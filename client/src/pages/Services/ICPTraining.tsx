@@ -43,7 +43,7 @@ export default function ICPTraining() {
           <div
             className="w-full h-full opacity-100 transition-opacity duration-1200"
             style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=2000&q=95')",
+              backgroundImage: "url('https://images.unsplash.com/photo-1576086213369-97a306d36557?w=2000&q=95')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundAttachment: "fixed"

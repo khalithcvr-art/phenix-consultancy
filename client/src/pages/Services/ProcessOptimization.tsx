@@ -70,7 +70,7 @@ export default function ProcessOptimization() {
           <div
             className="w-full h-full opacity-100"
             style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=2000&q=95')",
+              backgroundImage: "url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=2000&q=95')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundAttachment: "fixed"
