@@ -253,12 +253,20 @@ export default function ProjectManagement() {
       <div className="gold-divider" />
 
       {/* Team & Governance */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://i.pinimg.com/1200x/bd/53/e3/bd53e3f2ef42bb93416a90d4a1391df0.jpg" alt="Execution Excellence" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/60" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-block mb-4">
-                <p className="text-sm text-accent font-semibold uppercase tracking-wider">Execution Excellence</p>
+                <div className="px-4 py-2 bg-accent/20 border border-accent/40 rounded-full">
+                  <p className="text-sm text-accent font-semibold uppercase tracking-wider">Execution Excellence</p>
+                </div>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Recommended Team & Governance
