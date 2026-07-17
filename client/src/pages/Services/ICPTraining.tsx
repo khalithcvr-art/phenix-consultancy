@@ -72,8 +72,14 @@ export default function ICPTraining() {
       <div className="gold-divider" />
 
       {/* Training Overview */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1600&q=95" alt="Training Program Overview" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <div className="inline-block mb-4">
               <p className="text-sm text-accent font-semibold uppercase tracking-wider">Program Overview</p>
@@ -113,8 +119,14 @@ export default function ICPTraining() {
 
 
       {/* Hands-On Exercises */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&q=95" alt="Hands-On Practical Exercises" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Hands-On Practical Exercises
@@ -179,8 +191,14 @@ export default function ICPTraining() {
       <div className="gold-divider" />
 
       {/* Staff Roles */}
-      <section className="py-20 md:py-32 bg-secondary/30">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=95" alt="Role-Based Training Paths" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <div className="inline-block mb-4">
               <p className="text-sm text-accent font-semibold uppercase tracking-wider">Tailored Learning</p>
@@ -208,8 +226,14 @@ export default function ICPTraining() {
       <div className="gold-divider" />
 
       {/* Delivery Options */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1600&q=95" alt="Training Delivery Options" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Training Delivery Options
@@ -250,8 +274,14 @@ export default function ICPTraining() {
       <div className="gold-divider" />
 
       {/* Key Skills */}
-      <section className="py-20 md:py-32 bg-secondary/30">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1600&q=95" alt="Skills Development" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Skills You'll Develop

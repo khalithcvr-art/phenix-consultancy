@@ -120,8 +120,14 @@ export default function WorldclassStandards() {
       <div className="gold-divider" />
 
       {/* Core Standards */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=95" alt="Key International Standards" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <div className="inline-block mb-4">
               <p className="text-sm text-accent font-semibold uppercase tracking-wider">Global Benchmarks</p>
@@ -149,8 +155,14 @@ export default function WorldclassStandards() {
       <div className="gold-divider" />
 
       {/* Improvement Pillars */}
-      <section className="py-20 md:py-32 bg-secondary/30">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1600&q=95" alt="Six Pillars of Excellence" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <div className="inline-block mb-4">
               <p className="text-sm text-accent font-semibold uppercase tracking-wider">Implementation Framework</p>
@@ -180,8 +192,14 @@ export default function WorldclassStandards() {
       <div className="gold-divider" />
 
       {/* Three-Step Framework */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1600&q=95" alt="Comply Verify Improve Framework" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <div className="inline-block mb-4">
               <p className="text-sm text-accent font-semibold uppercase tracking-wider">Strategic Approach</p>
@@ -215,8 +233,14 @@ export default function WorldclassStandards() {
       <div className="gold-divider" />
 
       {/* Continuous Improvement */}
-      <section className="py-20 md:py-32 bg-secondary/30">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&q=95" alt="Continuous Improvement" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               What Continuous Improvement Means
@@ -255,8 +279,14 @@ export default function WorldclassStandards() {
       <div className="gold-divider" />
 
       {/* Our Support */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=95" alt="Phenix Support" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               How Phenix Supports Your Excellence Journey
