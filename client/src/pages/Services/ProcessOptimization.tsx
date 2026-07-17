@@ -329,8 +329,8 @@ export default function ProcessOptimization() {
             <p className="text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
               Phenix Consultancy delivers systematic process optimization that generates measurable, sustainable improvements to your refinery's productivity and profitability.
             </p>
-            <Button className="group bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-base font-semibold rounded-lg transition-all hover:scale-105 active:scale-95">
-              Start Your Optimization <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            <Button asChild className="group bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-base font-semibold rounded-lg transition-all hover:scale-105 active:scale-95">
+              <a href="/#contact">Start Your Optimization <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" /></a>
             </Button>
           </Reveal>
         </div>
