@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -811,46 +812,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-secondary/40 py-16 relative">
-        <Reveal className="absolute top-0 left-0 right-0">
-          <div className="footer-line h-px bg-gradient-to-r from-transparent via-accent/70 to-transparent" />
-        </Reveal>
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-3 gap-12 mb-12">
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <span className="shine-loop rounded-xl"><img src="/logo.png" alt="Phenix Logo" className="h-12 w-12" /></span>
-                <span className="font-bold">Phenix Consultancy</span>
-              </div>
-              <p className="text-sm text-foreground/55">Precision consulting for precious metal refineries across UAE and GCC.</p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-foreground/55">
-                {navLinks.map(l => (
-                  <li key={l.href}><a href={l.href} className="link-underline hover:text-accent transition-colors">{l.label}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Contact</h4>
-              <ul className="space-y-2 text-sm text-foreground/55">
-                <li>Email: <a href="mailto:info@phenixconsultancy.com" className="link-underline text-accent">info@phenixconsultancy.com</a></li>
-                <li>Website: <a href="#" className="link-underline text-accent">phenixconsultancy.com</a></li>
-                <li>LinkedIn: <a href="#" className="link-underline text-accent">Phenix Consultancy</a></li>
-                <li>Location: UAE | GCC | Global</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-border/30 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-foreground/55 gap-4">
-            <p>&copy; 2026 Phenix Consultancy FZC LLC. All rights reserved.</p>
-            <div className="flex gap-6">
-              <a href="#" className="link-underline hover:text-accent transition-colors">Privacy Policy</a>
-              <a href="#" className="link-underline hover:text-accent transition-colors">Terms of Service</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

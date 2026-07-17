@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CircleCheck as CheckCircle, Beaker, Zap, Shield } from "lucide-react";
+import Reveal from "@/components/Reveal";
+import Footer from "@/components/Footer";
 
 const coreFunctions = [
   "Gold, silver, platinum, palladium, rhodium testing",
@@ -61,7 +63,7 @@ const roadmapSteps = [
 
 export default function LaboratorySetup() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground page-enter">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container flex items-center justify-between h-20 mx-auto">
@@ -136,10 +138,12 @@ export default function LaboratorySetup() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {coreFunctions.map((func, index) => (
-              <div key={index} className="flex items-start gap-4 bg-card/50 border border-border/30 rounded-lg p-6 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
-                <Beaker className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                <p className="text-foreground/80 leading-relaxed">{func}</p>
-              </div>
+              <Reveal key={index} delay={(index % 2) * 120}>
+                <div className="flex items-start gap-4 bg-card/50 border border-border/30 rounded-lg p-6 hover:border-accent/50 hover:bg-card/80 transition-all duration-300 h-full">
+                  <Beaker className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                  <p className="text-foreground/80 leading-relaxed">{func}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -170,10 +174,12 @@ export default function LaboratorySetup() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {essentialEquipment.map((item, index) => (
-              <div key={index} className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
-                <h3 className="text-xl font-bold text-foreground mb-2">{item.name}</h3>
-                <p className="text-foreground/70 leading-relaxed">{item.description}</p>
-              </div>
+              <Reveal key={index} delay={(index % 2) * 120} flip>
+                <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300 h-full">
+                  <h3 className="text-xl font-bold text-foreground mb-2">{item.name}</h3>
+                  <p className="text-foreground/70 leading-relaxed">{item.description}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -200,7 +206,8 @@ export default function LaboratorySetup() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
+            <Reveal>
+            <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8 h-full">
               <h3 className="text-2xl font-bold text-foreground mb-4">Layout Zones</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -225,8 +232,10 @@ export default function LaboratorySetup() {
                 </li>
               </ul>
             </div>
+            </Reveal>
 
-            <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
+            <Reveal delay={150}>
+            <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8 h-full">
               <h3 className="text-2xl font-bold text-foreground mb-4">Control Systems</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -247,6 +256,7 @@ export default function LaboratorySetup() {
                 </li>
               </ul>
             </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -276,19 +286,21 @@ export default function LaboratorySetup() {
 
           <div className="space-y-6">
             {roadmapSteps.map((item, index) => (
-              <div key={index} className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 transition-all duration-300">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent/20 border border-accent/40">
-                      <span className="text-lg font-bold text-accent">{index + 1}</span>
+              <Reveal key={index} delay={index * 90}>
+                <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 transition-all duration-300">
+                  <div className="flex items-start gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent/20 border border-accent/40">
+                        <span className="text-lg font-bold text-accent">{index + 1}</span>
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-foreground mb-2">{item.step}</h3>
+                      <p className="text-foreground/70 leading-relaxed">{item.detail || item.description}</p>
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-foreground mb-2">{item.step}</h3>
-                    <p className="text-foreground/70 leading-relaxed">{item.detail || item.description}</p>
-                  </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -314,6 +326,7 @@ export default function LaboratorySetup() {
             </p>
           </div>
 
+          <Reveal delay={100}>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
               <h3 className="text-2xl font-bold text-foreground mb-4">Refineries</h3>
@@ -336,6 +349,7 @@ export default function LaboratorySetup() {
               </p>
             </div>
           </div>
+          </Reveal>
         </div>
       </section>
 
@@ -344,17 +358,21 @@ export default function LaboratorySetup() {
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-secondary/30">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Build a world-class laboratory for your operation
-          </h2>
-          <p className="text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Phenix Consultancy provides comprehensive lab design, equipment selection, method validation, and staff training to deliver trusted analytical results and support your certification and compliance goals.
-          </p>
-          <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-base font-semibold rounded-lg transition-all hover:scale-105 active:scale-95">
-            Plan Your Lab Setup <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <Reveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Build a world-class laboratory for your operation
+            </h2>
+            <p className="text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Phenix Consultancy provides comprehensive lab design, equipment selection, method validation, and staff training to deliver trusted analytical results and support your certification and compliance goals.
+            </p>
+            <Button className="group bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-base font-semibold rounded-lg transition-all hover:scale-105 active:scale-95">
+              Plan Your Lab Setup <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+          </Reveal>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

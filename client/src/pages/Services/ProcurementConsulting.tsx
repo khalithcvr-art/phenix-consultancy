@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CircleCheck as CheckCircle, TrendingUp, ChartBar as BarChart3, Shield, Zap } from "lucide-react";
+import Reveal from "@/components/Reveal";
+import Footer from "@/components/Footer";
 
 const services = [
   {
@@ -63,7 +65,7 @@ const processSteps = [
 
 export default function ProcurementConsulting() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground page-enter">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container flex items-center justify-between h-20 mx-auto">
@@ -124,22 +126,26 @@ export default function ProcurementConsulting() {
         </div>
 
         <div className="container mx-auto relative z-10">
-          <div className="mb-16">
-            <div className="inline-block mb-4">
-              <p className="text-sm text-accent font-semibold uppercase tracking-wider">Our Services</p>
+          <Reveal>
+            <div className="mb-16">
+              <div className="inline-block mb-4">
+                <p className="text-sm text-accent font-semibold uppercase tracking-wider">Our Services</p>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                End-to-End Procurement Solutions
+              </h2>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              End-to-End Procurement Solutions
-            </h2>
-          </div>
+          </Reveal>
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
-                <p className="text-foreground/70 leading-relaxed">{service.description}</p>
-              </div>
+              <Reveal key={index} delay={(index % 3) * 120} flip>
+                <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300 h-full">
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
+                  <p className="text-foreground/70 leading-relaxed">{service.description}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -156,33 +162,37 @@ export default function ProcurementConsulting() {
         </div>
 
         <div className="container mx-auto relative z-10">
-          <div className="mb-16">
-            <div className="inline-block mb-4">
-              <p className="text-sm text-accent font-semibold uppercase tracking-wider">Methodology</p>
+          <Reveal>
+            <div className="mb-16">
+              <div className="inline-block mb-4">
+                <p className="text-sm text-accent font-semibold uppercase tracking-wider">Methodology</p>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Six-Stage Procurement Process
+              </h2>
+              <p className="text-lg text-foreground/70 max-w-3xl">
+                A rigorous, transparent process that delivers best value, minimizes risk, and ensures supplier compliance with your technical and commercial requirements.
+              </p>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Six-Stage Procurement Process
-            </h2>
-            <p className="text-lg text-foreground/70 max-w-3xl">
-              A rigorous, transparent process that delivers best value, minimizes risk, and ensures supplier compliance with your technical and commercial requirements.
-            </p>
-          </div>
+          </Reveal>
 
           <div className="space-y-6">
             {processSteps.map((item, index) => (
-              <div key={index} className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 transition-all duration-300">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent/20 border border-accent/40">
-                      <span className="text-lg font-bold text-accent">{index + 1}</span>
+              <Reveal key={index} delay={index * 90}>
+                <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 transition-all duration-300">
+                  <div className="flex items-start gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent/20 border border-accent/40">
+                        <span className="text-lg font-bold text-accent">{index + 1}</span>
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-foreground mb-2">{item.step}</h3>
+                      <p className="text-foreground/70 leading-relaxed">{item.details}</p>
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-foreground mb-2">{item.step}</h3>
-                    <p className="text-foreground/70 leading-relaxed">{item.details}</p>
-                  </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -199,12 +209,15 @@ export default function ProcurementConsulting() {
         </div>
 
         <div className="container mx-auto relative z-10">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Why Technical Evaluation Matters
-            </h2>
-          </div>
+          <Reveal>
+            <div className="mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Why Technical Evaluation Matters
+              </h2>
+            </div>
+          </Reveal>
 
+          <Reveal delay={120}>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
               <BarChart3 className="h-8 w-8 text-accent mb-4" />
@@ -238,6 +251,7 @@ export default function ProcurementConsulting() {
               </p>
             </div>
           </div>
+          </Reveal>
         </div>
       </section>
 
@@ -246,17 +260,21 @@ export default function ProcurementConsulting() {
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-secondary/30">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Get strategic procurement guidance for your next acquisition
-          </h2>
-          <p className="text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Phenix Consultancy delivers technical rigor, vendor expertise, and commercial acumen to help you make confident purchasing decisions.
-          </p>
-          <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-base font-semibold rounded-lg transition-all hover:scale-105 active:scale-95">
-            Discuss Your Needs <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <Reveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Get strategic procurement guidance for your next acquisition
+            </h2>
+            <p className="text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Phenix Consultancy delivers technical rigor, vendor expertise, and commercial acumen to help you make confident purchasing decisions.
+            </p>
+            <Button className="group bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-base font-semibold rounded-lg transition-all hover:scale-105 active:scale-95">
+              Discuss Your Needs <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+          </Reveal>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }
