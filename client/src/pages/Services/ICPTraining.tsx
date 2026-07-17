@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CircleCheck as CheckCircle, Users, BookOpen, Zap } from "lucide-react";
+import Reveal from "@/components/Reveal";
+import Footer from "@/components/Footer";
 
 
 const staffRoles = [
@@ -19,7 +21,7 @@ const staffRoles = [
 
 export default function ICPTraining() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground page-enter">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container flex items-center justify-between h-20 mx-auto">
@@ -90,7 +92,8 @@ export default function ICPTraining() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
+            <Reveal>
+            <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8 h-full">
               <BookOpen className="h-8 w-8 text-accent mb-4" />
               <h3 className="text-2xl font-bold text-foreground mb-4">Training Goals</h3>
               <ul className="space-y-3 text-foreground/80">
@@ -101,8 +104,10 @@ export default function ICPTraining() {
                 <li>• Support accreditation and compliance readiness</li>
               </ul>
             </div>
+            </Reveal>
 
-            <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
+            <Reveal delay={150}>
+            <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8 h-full">
               <Zap className="h-8 w-8 text-accent mb-4" />
               <h3 className="text-2xl font-bold text-foreground mb-4">Expected Outcomes</h3>
               <ul className="space-y-3 text-foreground/80">
@@ -113,6 +118,7 @@ export default function ICPTraining() {
                 <li>✓ Professional competency certification</li>
               </ul>
             </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -137,7 +143,8 @@ export default function ICPTraining() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
+            <Reveal flip>
+            <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300 h-full">
               <h3 className="text-2xl font-bold text-foreground mb-6">Practical Drills</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -162,8 +169,10 @@ export default function ICPTraining() {
                 </li>
               </ul>
             </div>
+            </Reveal>
 
-            <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
+            <Reveal delay={150} flip>
+            <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300 h-full">
               <h3 className="text-2xl font-bold text-foreground mb-6">Assessment</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -184,6 +193,7 @@ export default function ICPTraining() {
                 </li>
               </ul>
             </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -213,11 +223,13 @@ export default function ICPTraining() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {staffRoles.map((item, index) => (
-              <div key={index} className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
-                <Users className="h-8 w-8 text-accent mb-4" />
-                <h3 className="text-2xl font-bold text-foreground mb-3">{item.role}</h3>
-                <p className="text-foreground/70 leading-relaxed">{item.focus}</p>
-              </div>
+              <Reveal key={index} delay={index * 120} flip>
+                <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300 h-full">
+                  <Users className="h-8 w-8 text-accent mb-4" />
+                  <h3 className="text-2xl font-bold text-foreground mb-3">{item.role}</h3>
+                  <p className="text-foreground/70 leading-relaxed">{item.focus}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -243,6 +255,7 @@ export default function ICPTraining() {
             </p>
           </div>
 
+          <Reveal delay={100}>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
               <h3 className="text-2xl font-bold text-foreground mb-4">Public Vendor Courses</h3>
@@ -268,6 +281,7 @@ export default function ICPTraining() {
               <p className="text-sm text-accent font-semibold">Best for: Maximum efficiency & depth</p>
             </div>
           </div>
+          </Reveal>
         </div>
       </section>
 
@@ -289,6 +303,7 @@ export default function ICPTraining() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
+            <Reveal>
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">Technical Skills</h3>
               <ul className="space-y-3">
@@ -310,7 +325,9 @@ export default function ICPTraining() {
                 </li>
               </ul>
             </div>
+            </Reveal>
 
+            <Reveal delay={150}>
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">Professional Skills</h3>
               <ul className="space-y-3">
@@ -332,6 +349,7 @@ export default function ICPTraining() {
                 </li>
               </ul>
             </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -341,17 +359,21 @@ export default function ICPTraining() {
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-secondary/30">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Build a trained, competent team
-          </h2>
-          <p className="text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Phenix Consultancy designs and delivers customized ICP-OES training programs that build operator confidence, lab reliability, and technical independence for your team.
-          </p>
-          <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-base font-semibold rounded-lg transition-all hover:scale-105 active:scale-95">
-            Design Training Program <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <Reveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Build a trained, competent team
+            </h2>
+            <p className="text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Phenix Consultancy designs and delivers customized ICP-OES training programs that build operator confidence, lab reliability, and technical independence for your team.
+            </p>
+            <Button className="group bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-base font-semibold rounded-lg transition-all hover:scale-105 active:scale-95">
+              Design Training Program <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+          </Reveal>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

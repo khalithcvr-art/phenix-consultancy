@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Calendar, Users, Shield, Zap, TrendingUp } from "lucide-react";
+import Reveal from "@/components/Reveal";
+import Footer from "@/components/Footer";
 
 const phases = [
   {
@@ -95,7 +97,7 @@ const controls = [
 
 export default function ProjectManagement() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground page-enter">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container flex items-center justify-between h-20 mx-auto">
@@ -160,21 +162,24 @@ export default function ProjectManagement() {
       {/* Seven-Phase Plan */}
       <section className="py-20 md:py-32">
         <div className="container mx-auto">
-          <div className="mb-16">
-            <div className="inline-block mb-4">
-              <p className="text-sm text-accent font-semibold uppercase tracking-wider">Proven Methodology</p>
+          <Reveal>
+            <div className="mb-16">
+              <div className="inline-block mb-4">
+                <p className="text-sm text-accent font-semibold uppercase tracking-wider">Proven Methodology</p>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Seven-Phase Project Delivery
+              </h2>
+              <p className="text-lg text-foreground/70 max-w-3xl">
+                Each phase is designed with clear milestones, stage-gate reviews, and risk controls to deliver a world-class refinery on schedule and within budget.
+              </p>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Seven-Phase Project Delivery
-            </h2>
-            <p className="text-lg text-foreground/70 max-w-3xl">
-              Each phase is designed with clear milestones, stage-gate reviews, and risk controls to deliver a world-class refinery on schedule and within budget.
-            </p>
-          </div>
+          </Reveal>
 
           <div className="space-y-6">
             {phases.map((item, index) => (
-              <div key={index} className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
+              <Reveal key={index} delay={index * 90}>
+              <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
                     <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent/20 border border-accent/40">
@@ -200,14 +205,17 @@ export default function ProjectManagement() {
                   </div>
                 </div>
               </div>
+              </Reveal>
             ))}
           </div>
 
+          <Reveal>
           <div className="mt-12 bg-accent/10 border border-accent/30 rounded-lg p-8">
             <p className="text-lg text-foreground/80 leading-relaxed">
               <strong className="text-accent">Typical Timeline:</strong> Feasibility & testing 2–4 months → Detailed design 2–4 months → Procurement 3–6 months → Construction & installation 4–8 months → Commissioning 1–3 months → Total project duration typically 12–27 months depending on capacity and scope.
             </p>
           </div>
+          </Reveal>
         </div>
       </section>
 
@@ -222,29 +230,33 @@ export default function ProjectManagement() {
         </div>
 
         <div className="container mx-auto relative z-10">
-          <div className="mb-20">
-            <div className="inline-block mb-4">
-              <div className="px-4 py-2 bg-accent/20 border border-accent/40 rounded-full">
-                <p className="text-sm text-accent font-semibold uppercase tracking-wider">Risk Management</p>
+          <Reveal>
+            <div className="mb-20">
+              <div className="inline-block mb-4">
+                <div className="px-4 py-2 bg-accent/20 border border-accent/40 rounded-full">
+                  <p className="text-sm text-accent font-semibold uppercase tracking-wider">Risk Management</p>
+                </div>
               </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Critical Controls & Risk Mitigation
+              </h2>
+              <p className="text-lg text-foreground/80 max-w-3xl leading-relaxed">
+                Protect your investment through integrated systems for accountability, safety, quality, and financial discipline across every project phase.
+              </p>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Critical Controls & Risk Mitigation
-            </h2>
-            <p className="text-lg text-foreground/80 max-w-3xl leading-relaxed">
-              Protect your investment through integrated systems for accountability, safety, quality, and financial discipline across every project phase.
-            </p>
-          </div>
+          </Reveal>
 
           <div className="grid md:grid-cols-2 gap-8">
             {controls.map((control, index) => (
-              <div key={index} className="glass rounded-2xl p-8 border border-accent/30 hover:border-accent/50 transition-all duration-300 backdrop-blur-sm">
-                <div className="flex items-start gap-4 mb-4">
-                  <Shield className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                  <h3 className="text-xl font-bold text-foreground">{control.title}</h3>
+              <Reveal key={index} delay={(index % 2) * 120} flip>
+                <div className="glass rounded-2xl p-8 border border-accent/30 hover:border-accent/50 transition-all duration-300 backdrop-blur-sm h-full">
+                  <div className="flex items-start gap-4 mb-4">
+                    <Shield className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                    <h3 className="text-xl font-bold text-foreground">{control.title}</h3>
+                  </div>
+                  <p className="text-foreground/90 leading-relaxed">{control.description}</p>
                 </div>
-                <p className="text-foreground/90 leading-relaxed">{control.description}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -262,6 +274,7 @@ export default function ProjectManagement() {
 
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <Reveal>
             <div>
               <div className="inline-block mb-4">
                 <div className="px-4 py-2 bg-accent/20 border border-accent/40 rounded-full">
@@ -292,7 +305,9 @@ export default function ProjectManagement() {
                 </div>
               </div>
             </div>
+            </Reveal>
 
+            <Reveal delay={150}>
             <div className="space-y-6">
               <div className="bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/30 rounded-lg p-8">
                 <h3 className="text-2xl font-bold text-foreground mb-4">Stage-Gate Reviews</h3>
@@ -322,6 +337,7 @@ export default function ProjectManagement() {
                 </p>
               </div>
             </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -331,17 +347,21 @@ export default function ProjectManagement() {
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-secondary/30">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Ready to build your world-class refinery?
-          </h2>
-          <p className="text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Phenix Consultancy provides end-to-end project management, from feasibility through commissioning, protecting your investment at every stage.
-          </p>
-          <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-base font-semibold rounded-lg transition-all hover:scale-105 active:scale-95">
-            Schedule a Consultation <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <Reveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Ready to build your world-class refinery?
+            </h2>
+            <p className="text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Phenix Consultancy provides end-to-end project management, from feasibility through commissioning, protecting your investment at every stage.
+            </p>
+            <Button className="group bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-base font-semibold rounded-lg transition-all hover:scale-105 active:scale-95">
+              Schedule a Consultation <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+          </Reveal>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

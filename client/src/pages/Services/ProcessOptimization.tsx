@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CircleCheck as CheckCircle, Zap, TrendingUp, Target } from "lucide-react";
+import Reveal from "@/components/Reveal";
+import Footer from "@/components/Footer";
 
 const optimizationSteps = [
   {
@@ -46,7 +48,7 @@ const quickWins = [
 
 export default function ProcessOptimization() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground page-enter">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container flex items-center justify-between h-20 mx-auto">
@@ -107,33 +109,37 @@ export default function ProcessOptimization() {
         </div>
 
         <div className="container mx-auto relative z-10">
-          <div className="mb-16">
-            <div className="inline-block mb-4">
-              <p className="text-sm text-accent font-semibold uppercase tracking-wider">Proven Methodology</p>
+          <Reveal>
+            <div className="mb-16">
+              <div className="inline-block mb-4">
+                <p className="text-sm text-accent font-semibold uppercase tracking-wider">Proven Methodology</p>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Eight-Step Optimization Program
+              </h2>
+              <p className="text-lg text-foreground/70 max-w-3xl">
+                Increase metal recovery and throughput, reduce reagent cost and losses, lower environmental footprint, and improve product quality and consistency.
+              </p>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Eight-Step Optimization Program
-            </h2>
-            <p className="text-lg text-foreground/70 max-w-3xl">
-              Increase metal recovery and throughput, reduce reagent cost and losses, lower environmental footprint, and improve product quality and consistency.
-            </p>
-          </div>
+          </Reveal>
 
           <div className="space-y-6">
             {optimizationSteps.map((item, index) => (
-              <div key={index} className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent/20 border border-accent/40">
-                      <span className="text-lg font-bold text-accent">{index + 1}</span>
+              <Reveal key={index} delay={index * 80}>
+                <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
+                  <div className="flex items-start gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent/20 border border-accent/40">
+                        <span className="text-lg font-bold text-accent">{index + 1}</span>
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-foreground mb-2">{item.step}</h3>
+                      <p className="text-foreground/70 leading-relaxed">{item.description}</p>
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-foreground mb-2">{item.step}</h3>
-                    <p className="text-foreground/70 leading-relaxed">{item.description}</p>
-                  </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -150,24 +156,28 @@ export default function ProcessOptimization() {
         </div>
 
         <div className="container mx-auto relative z-10">
-          <div className="mb-16">
-            <div className="inline-block mb-4">
-              <p className="text-sm text-accent font-semibold uppercase tracking-wider">Fast-Track Improvements</p>
+          <Reveal>
+            <div className="mb-16">
+              <div className="inline-block mb-4">
+                <p className="text-sm text-accent font-semibold uppercase tracking-wider">Fast-Track Improvements</p>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Quick Wins: Low Cost, High Impact
+              </h2>
+              <p className="text-lg text-foreground/70 max-w-3xl">
+                Start generating returns immediately with targeted improvements that require minimal capital investment but deliver measurable performance gains.
+              </p>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Quick Wins: Low Cost, High Impact
-            </h2>
-            <p className="text-lg text-foreground/70 max-w-3xl">
-              Start generating returns immediately with targeted improvements that require minimal capital investment but deliver measurable performance gains.
-            </p>
-          </div>
+          </Reveal>
 
           <div className="grid md:grid-cols-2 gap-8">
             {quickWins.map((win, index) => (
-              <div key={index} className="bg-card/50 border border-border/30 rounded-lg p-6 hover:border-accent/50 transition-all duration-300 flex items-start gap-4">
-                <Zap className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                <p className="text-foreground/80 leading-relaxed">{win}</p>
-              </div>
+              <Reveal key={index} delay={(index % 2) * 120}>
+                <div className="bg-card/50 border border-border/30 rounded-lg p-6 hover:border-accent/50 transition-all duration-300 flex items-start gap-4 h-full">
+                  <Zap className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                  <p className="text-foreground/80 leading-relaxed">{win}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -184,15 +194,18 @@ export default function ProcessOptimization() {
         </div>
 
         <div className="container mx-auto relative z-10">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Advanced Analytical Tools
-            </h2>
-            <p className="text-lg text-foreground/70 max-w-3xl mb-12">
-              We deploy rigorous scientific methods to uncover opportunities and validate improvements before plant implementation.
-            </p>
-          </div>
+          <Reveal>
+            <div className="mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Advanced Analytical Tools
+              </h2>
+              <p className="text-lg text-foreground/70 max-w-3xl mb-12">
+                We deploy rigorous scientific methods to uncover opportunities and validate improvements before plant implementation.
+              </p>
+            </div>
+          </Reveal>
 
+          <Reveal delay={120}>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
               <h3 className="text-xl font-bold text-foreground mb-4">Metallurgical Accounting</h3>
@@ -224,6 +237,7 @@ export default function ProcessOptimization() {
               </ul>
             </div>
           </div>
+          </Reveal>
         </div>
       </section>
 
@@ -238,12 +252,15 @@ export default function ProcessOptimization() {
         </div>
 
         <div className="container mx-auto relative z-10">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Real-World Example
-            </h2>
-          </div>
+          <Reveal>
+            <div className="mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Real-World Example
+              </h2>
+            </div>
+          </Reveal>
 
+          <Reveal delay={120} flip>
           <div className="bg-card/80 border border-accent/30 rounded-lg p-8 md:p-12">
             <div className="space-y-6">
               <div>
@@ -278,6 +295,7 @@ export default function ProcessOptimization() {
               </div>
             </div>
           </div>
+          </Reveal>
         </div>
       </section>
 
@@ -286,14 +304,16 @@ export default function ProcessOptimization() {
       {/* Environmental Considerations */}
       <section className="py-20 md:py-32">
         <div className="container mx-auto">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Environmental & Safety Integration
-            </h2>
-            <p className="text-lg text-foreground/70 max-w-3xl">
-              Optimization programs include hazard control, closed-loop water/reagent circuits, effluent treatment, emissions tracking, and life-cycle assessment to ensure sustainable, compliant operations.
-            </p>
-          </div>
+          <Reveal>
+            <div className="mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Environmental & Safety Integration
+              </h2>
+              <p className="text-lg text-foreground/70 max-w-3xl">
+                Optimization programs include hazard control, closed-loop water/reagent circuits, effluent treatment, emissions tracking, and life-cycle assessment to ensure sustainable, compliant operations.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -302,17 +322,21 @@ export default function ProcessOptimization() {
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-secondary/30">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Unlock hidden recovery and reduce costs
-          </h2>
-          <p className="text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Phenix Consultancy delivers systematic process optimization that generates measurable, sustainable improvements to your refinery's productivity and profitability.
-          </p>
-          <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-base font-semibold rounded-lg transition-all hover:scale-105 active:scale-95">
-            Start Your Optimization <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <Reveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Unlock hidden recovery and reduce costs
+            </h2>
+            <p className="text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Phenix Consultancy delivers systematic process optimization that generates measurable, sustainable improvements to your refinery's productivity and profitability.
+            </p>
+            <Button className="group bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-base font-semibold rounded-lg transition-all hover:scale-105 active:scale-95">
+              Start Your Optimization <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+          </Reveal>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

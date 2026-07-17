@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CircleCheck as CheckCircle, Shield, TrendingUp, Award } from "lucide-react";
+import Reveal from "@/components/Reveal";
+import Footer from "@/components/Footer";
 
 const coreStandards = [
   {
@@ -67,7 +69,7 @@ const simpleFramework = [
 
 export default function WorldclassStandards() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground page-enter">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container flex items-center justify-between h-20 mx-auto">
@@ -142,11 +144,13 @@ export default function WorldclassStandards() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {coreStandards.map((standard, index) => (
-              <div key={index} className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
-                <Award className="h-8 w-8 text-accent mb-4" />
-                <h3 className="text-xl font-bold text-foreground mb-3">{standard.title}</h3>
-                <p className="text-foreground/70 leading-relaxed">{standard.description}</p>
-              </div>
+              <Reveal key={index} delay={(index % 2) * 120} flip>
+                <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300 h-full">
+                  <Award className="h-8 w-8 text-accent mb-4" />
+                  <h3 className="text-xl font-bold text-foreground mb-3">{standard.title}</h3>
+                  <p className="text-foreground/70 leading-relaxed">{standard.description}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -177,13 +181,15 @@ export default function WorldclassStandards() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {improvementPillars.map((pillar, index) => (
-              <div key={index} className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
-                <div className="flex items-start gap-4 mb-4">
-                  <Shield className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                  <h3 className="text-xl font-bold text-foreground">{pillar.title}</h3>
+              <Reveal key={index} delay={(index % 2) * 120}>
+                <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300 h-full">
+                  <div className="flex items-start gap-4 mb-4">
+                    <Shield className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                    <h3 className="text-xl font-bold text-foreground">{pillar.title}</h3>
+                  </div>
+                  <p className="text-foreground/70 leading-relaxed">{pillar.description}</p>
                 </div>
-                <p className="text-foreground/70 leading-relaxed">{pillar.description}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -214,19 +220,23 @@ export default function WorldclassStandards() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {simpleFramework.map((item, index) => (
-              <div key={index} className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
-                <div className="text-5xl font-bold text-accent mb-4">{item.icon}</div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">{item.stage}</h3>
-                <p className="text-foreground/70 leading-relaxed">{item.description}</p>
-              </div>
+              <Reveal key={index} delay={index * 130} flip>
+                <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8 h-full">
+                  <div className="text-5xl font-bold text-accent mb-4">{item.icon}</div>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">{item.stage}</h3>
+                  <p className="text-foreground/70 leading-relaxed">{item.description}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
 
+          <Reveal>
           <div className="mt-12 bg-card/80 border border-accent/30 rounded-lg p-8">
             <p className="text-lg text-foreground/80 leading-relaxed">
               This cycle is <strong>never done</strong>—each compliance cycle, each audit, and each KPI review feeds into the next iteration. The best companies treat standards not as checklist items, but as foundations for building trust, reducing risk, and creating competitive advantage.
             </p>
           </div>
+          </Reveal>
         </div>
       </section>
 
@@ -251,7 +261,8 @@ export default function WorldclassStandards() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
+            <Reveal>
+            <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300 h-full">
               <TrendingUp className="h-8 w-8 text-accent mb-4" />
               <h3 className="text-2xl font-bold text-foreground mb-4">Metrics & Monitoring</h3>
               <ul className="space-y-3 text-foreground/70">
@@ -261,8 +272,10 @@ export default function WorldclassStandards() {
                 <li>✓ Regular review cycles with stakeholder feedback</li>
               </ul>
             </div>
+            </Reveal>
 
-            <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300">
+            <Reveal delay={150}>
+            <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300 h-full">
               <Award className="h-8 w-8 text-accent mb-4" />
               <h3 className="text-2xl font-bold text-foreground mb-4">Market Recognition</h3>
               <ul className="space-y-3 text-foreground/70">
@@ -272,6 +285,7 @@ export default function WorldclassStandards() {
                 <li>✓ Enhanced reputation and stakeholder confidence</li>
               </ul>
             </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -294,6 +308,7 @@ export default function WorldclassStandards() {
           </div>
 
           <div className="space-y-6">
+            <Reveal>
             <div className="bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
               <div className="flex items-start gap-4">
                 <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
@@ -303,7 +318,9 @@ export default function WorldclassStandards() {
                 </div>
               </div>
             </div>
+            </Reveal>
 
+            <Reveal delay={80}>
             <div className="bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
               <div className="flex items-start gap-4">
                 <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
@@ -313,7 +330,9 @@ export default function WorldclassStandards() {
                 </div>
               </div>
             </div>
+            </Reveal>
 
+            <Reveal delay={80}>
             <div className="bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
               <div className="flex items-start gap-4">
                 <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
@@ -323,7 +342,9 @@ export default function WorldclassStandards() {
                 </div>
               </div>
             </div>
+            </Reveal>
 
+            <Reveal delay={80}>
             <div className="bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
               <div className="flex items-start gap-4">
                 <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
@@ -333,7 +354,9 @@ export default function WorldclassStandards() {
                 </div>
               </div>
             </div>
+            </Reveal>
 
+            <Reveal delay={80}>
             <div className="bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-8">
               <div className="flex items-start gap-4">
                 <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
@@ -343,6 +366,7 @@ export default function WorldclassStandards() {
                 </div>
               </div>
             </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -352,17 +376,21 @@ export default function WorldclassStandards() {
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-secondary/30">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Build a culture of world-class compliance and excellence
-          </h2>
-          <p className="text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Phenix Consultancy helps precious metals companies audit current practices, design robust systems, train teams, and sustain continuous improvement aligned with global standards and market expectations.
-          </p>
-          <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-base font-semibold rounded-lg transition-all hover:scale-105 active:scale-95">
-            Audit Your Standards <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <Reveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Build a culture of world-class compliance and excellence
+            </h2>
+            <p className="text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Phenix Consultancy helps precious metals companies audit current practices, design robust systems, train teams, and sustain continuous improvement aligned with global standards and market expectations.
+            </p>
+            <Button className="group bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-base font-semibold rounded-lg transition-all hover:scale-105 active:scale-95">
+              Audit Your Standards <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+          </Reveal>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

@@ -107,10 +107,31 @@
   .text-accent { color: oklch(0.75 0.18 65); }
   .border-accent { border-color: oklch(0.75 0.18 65); }
 
-  /* gold → transparent divider */
+  /* gold → transparent divider with periodic shimmer sweep */
   .gold-divider {
     height: 1px;
     background: linear-gradient(90deg, transparent, rgb(var(--gold) / 0.7), transparent);
+    position: relative;
+    overflow: hidden;
+  }
+  .gold-divider::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    width: 18%;
+    background: linear-gradient(90deg, transparent, rgb(var(--gold)), transparent);
+    animation: divider-sweep 6s ease-in-out 1.2s infinite;
+  }
+  @keyframes divider-sweep {
+    0% { transform: translateX(-120%); }
+    55%, 100% { transform: translateX(680%); }
+  }
+
+  /* page enter fade for route changes */
+  .page-enter { animation: page-fade 0.55s ease-out both; }
+  @keyframes page-fade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
   }
 
   /* gold→silver text gradient for hero emphasis */
