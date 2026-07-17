@@ -116,8 +116,14 @@ export default function ProcurementConsulting() {
       <div className="gold-divider" />
 
       {/* Services Overview */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&q=95" alt="Procurement Solutions" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <div className="inline-block mb-4">
               <p className="text-sm text-accent font-semibold uppercase tracking-wider">Our Services</p>
@@ -185,8 +191,14 @@ export default function ProcurementConsulting() {
       <div className="gold-divider" />
 
       {/* Key Benefits */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=95" alt="Technical Evaluation" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Why Technical Evaluation Matters

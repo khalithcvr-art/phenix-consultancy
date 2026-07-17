@@ -142,8 +142,14 @@ export default function ProcessOptimization() {
       <div className="gold-divider" />
 
       {/* Quick Wins */}
-      <section className="py-20 md:py-32 bg-secondary/30">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1600&q=95" alt="Quick Wins" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <div className="inline-block mb-4">
               <p className="text-sm text-accent font-semibold uppercase tracking-wider">Fast-Track Improvements</p>
@@ -170,8 +176,14 @@ export default function ProcessOptimization() {
       <div className="gold-divider" />
 
       {/* Core Methods */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=95" alt="Advanced Analytical Tools" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Advanced Analytical Tools
@@ -218,8 +230,14 @@ export default function ProcessOptimization() {
       <div className="gold-divider" />
 
       {/* Example Case */}
-      <section className="py-20 md:py-32 bg-secondary/30">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=1600&q=95" alt="Real-World Example" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Real-World Example

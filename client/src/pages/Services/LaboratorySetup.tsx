@@ -114,8 +114,14 @@ export default function LaboratorySetup() {
       <div className="gold-divider" />
 
       {/* Core Lab Functions */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1600&q=95" alt="Core Laboratory Functions" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <div className="inline-block mb-4">
               <p className="text-sm text-accent font-semibold uppercase tracking-wider">Capabilities</p>
@@ -142,8 +148,14 @@ export default function LaboratorySetup() {
       <div className="gold-divider" />
 
       {/* Essential Equipment */}
-      <section className="py-20 md:py-32 bg-secondary/30">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=1600&q=95" alt="Essential Lab Equipment" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <div className="inline-block mb-4">
               <p className="text-sm text-accent font-semibold uppercase tracking-wider">Equipment & Infrastructure</p>
@@ -170,8 +182,14 @@ export default function LaboratorySetup() {
       <div className="gold-divider" />
 
       {/* Optimal Lab Layout */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=1600&q=95" alt="Optimal Lab Design" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Optimal Lab Design & Workflow
@@ -279,8 +297,14 @@ export default function LaboratorySetup() {
       <div className="gold-divider" />
 
       {/* Business Applications */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600&q=95" alt="Business Applications" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Who Benefits from a Precious Metals Lab
