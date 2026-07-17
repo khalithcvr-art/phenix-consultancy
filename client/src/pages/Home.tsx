@@ -722,7 +722,7 @@ export default function Home() {
             <Reveal>
               <div className="relative rounded-3xl overflow-hidden group h-[500px] md:h-[550px]">
                 <div className="absolute inset-0">
-                  <img src="/subash-leader.jpg" alt="Mr. Subash Nediyodath" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src="/subash-leader.jpg" alt="Mr. Subash Nediyodath" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10" />
                 <div className="absolute inset-0 bg-gradient-to-r from-background/60 to-background/20" />
