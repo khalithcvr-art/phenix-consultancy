@@ -570,8 +570,14 @@ export default function Home() {
       <div className="gold-divider" />
 
       {/* Methodology */}
-      <section id="methodology" className="py-24 md:py-32 bg-secondary/20">
-        <div className="container mx-auto">
+      <section id="methodology" className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://i.pinimg.com/1200x/16/81/1a/16811a9933e76da3cfc970d543f7467a.jpg" alt="Proven Methodology" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <SectionHead
             eyebrow="Proven Methodology"
             title="Seven Phases. One Standard: Precision."
