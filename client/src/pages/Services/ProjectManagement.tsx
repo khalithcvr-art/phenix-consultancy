@@ -213,29 +213,37 @@ export default function ProjectManagement() {
 
       <div className="gold-divider" />
 
-      {/* Critical Controls */}
-      <section className="py-20 md:py-32 bg-secondary/30">
-        <div className="container mx-auto">
-          <div className="mb-16">
+      {/* Risk Management */}
+      <section className="py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://i.pinimg.com/1200x/59/8a/c4/598ac4d00a7e0800ba3bca53998ae87e.jpg" alt="Risk Management" className="w-full h-full object-cover opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+
+        <div className="container mx-auto relative z-10">
+          <div className="mb-20">
             <div className="inline-block mb-4">
-              <p className="text-sm text-accent font-semibold uppercase tracking-wider">Risk Management</p>
+              <div className="px-4 py-2 bg-accent/20 border border-accent/40 rounded-full">
+                <p className="text-sm text-accent font-semibold uppercase tracking-wider">Risk Management</p>
+              </div>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Critical Controls & Risk Mitigation
             </h2>
-            <p className="text-lg text-foreground/70 max-w-3xl">
-              Protect your investment through integrated systems for accountability, safety, quality, and financial discipline.
+            <p className="text-lg text-foreground/80 max-w-3xl leading-relaxed">
+              Protect your investment through integrated systems for accountability, safety, quality, and financial discipline across every project phase.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {controls.map((control, index) => (
-              <div key={index} className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 transition-all duration-300">
+              <div key={index} className="glass rounded-2xl p-8 border border-accent/30 hover:border-accent/50 transition-all duration-300 backdrop-blur-sm">
                 <div className="flex items-start gap-4 mb-4">
-                  <Shield className="h-6 w-6 text-accent flex-shrink-0" />
+                  <Shield className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <h3 className="text-xl font-bold text-foreground">{control.title}</h3>
                 </div>
-                <p className="text-foreground/70 leading-relaxed">{control.description}</p>
+                <p className="text-foreground/90 leading-relaxed">{control.description}</p>
               </div>
             ))}
           </div>
