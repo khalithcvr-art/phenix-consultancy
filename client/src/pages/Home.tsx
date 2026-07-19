@@ -357,12 +357,19 @@ function ContactForm() {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) return void toast.error("Please fill in all required fields");
     setBusy(true);
-    await new Promise(r => setTimeout(r, 1000));
-    toast.success("Thank you! We'll be in touch soon.");
-    setForm({ name: "", email: "", phone: "", company: "", message: "" });
-    setBusy(false);
-    setBurst(true);
-    setTimeout(() => setBurst(false), 900);
+    try {
+      const body = new URLSearchParams({ "form-name": "contact", ...form }).toString();
+      const res = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body });
+      if (!res.ok) throw new Error(`Submission failed: ${res.status}`);
+      toast.success("Thank you! We'll be in touch soon.");
+      setForm({ name: "", email: "", phone: "", company: "", message: "" });
+      setBurst(true);
+      setTimeout(() => setBurst(false), 900);
+    } catch {
+      toast.error("Something went wrong sending your message. Please try WhatsApp or email us directly.");
+    } finally {
+      setBusy(false);
+    }
   };
 
   const cls = "bg-background/60 border-border/40 text-foreground placeholder:text-foreground/35";
@@ -373,7 +380,8 @@ function ContactForm() {
     ["company", "Company Name", "Your company", false],
   ];
   return (
-    <form onSubmit={submit} className="glass rounded-2xl p-8 md:p-10 space-y-6 text-left">
+    <form onSubmit={submit} name="contact" data-netlify="true" className="glass rounded-2xl p-8 md:p-10 space-y-6 text-left">
+      <input type="hidden" name="form-name" value="contact" />
       <div className="grid md:grid-cols-2 gap-6">
         {fields.map(([name, label, ph, req]) => (
           <div key={name} className="field">
