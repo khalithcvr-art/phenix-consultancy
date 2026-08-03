@@ -188,7 +188,7 @@ const expertiseData = [
   { title: "Procurement Consulting & Technical Evaluation", description: "Vendor review, equipment selection, specification comparison, calibration standards procurement, and investment-grade purchasing support.", Icon: CheckCircle2, href: "/services/procurement-consulting", backgroundImage: "https://i.pinimg.com/1200x/b7/7a/42/b77a4264911d8cd2e5756fb1eed222f0.jpg" },
   { title: "Production & Chemical Process Optimization", description: "Production process planning, chemical process improvement, troubleshooting, and operational performance enhancement for existing refineries.", Icon: TrendingUp, href: "/services/process-optimization", backgroundImage: "https://i.pinimg.com/1200x/6f/a4/29/6fa4292bbb6bf17e3e2b1196d5d78cbb.jpg" },
   { title: "Laboratory Setup & Development", description: "Laboratory planning, standard practices, ISO method validation, reference material production, and reliable analytical workflows.", Icon: FlaskConical, href: "/services/laboratory-setup", backgroundImage: "https://i.pinimg.com/1200x/a3/e5/d3/a3e5d31ecc67efdf9f1c38fa2ee0c37c.jpg" },
-  { title: "ICP-OES Training & Technical Staff Development", description: "Practical training programs that strengthen operator capability, laboratory reliability, and long-term technical independence.", Icon: GraduationCap, href: "/services/icp-training", backgroundImage: "https://i.pinimg.com/1200x/8f/02/b2/8f02b2008406456dd233615919349495.jpg" },
+  { title: "ICP-OES Instrument Training & Technical Staff Development", description: "Practical training programs that strengthen operator capability, laboratory reliability, and long-term technical independence.", Icon: GraduationCap, href: "/services/icp-training", backgroundImage: "https://i.pinimg.com/1200x/8f/02/b2/8f02b2008406456dd233615919349495.jpg" },
   { title: "World-class Standards & Continuous Improvement", description: "Tailor-made consulting for reliable operations, cost-effective solutions, and refinery systems built for sustainable growth.", Icon: Trophy, href: "/services/world-class-standards", backgroundImage: "https://i.pinimg.com/1200x/70/f2/f5/70f2f5abcbfcd8ca5186ff466debf1bd.jpg" },
 ];
 
@@ -213,10 +213,10 @@ const methodology = [
 
 const certifications = [
   { code: "ISO 17025", label: "Laboratory Accreditation Support" },
-  { code: "LBMA", label: "Good Delivery Standards" },
+  { code: "LBMA", label: "Delivery Standards Support" },
   { code: "ICP-OES", label: "Validated Analysis Methods" },
   { code: "AU 999.9", label: "Refined Gold Benchmarks" },
-  { code: "AG 999.0", label: "Fine Silver Benchmarks" },
+  { code: "AG 999.9", label: "Fine Silver Benchmarks" },
   { code: "RJC CoC", label: "Chain of Custody Alignment" },
 ];
 
@@ -728,19 +728,19 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <Reveal>
-              <div className="relative rounded-3xl overflow-hidden group h-[500px] md:h-[550px]">
+              <div className="relative rounded-3xl overflow-hidden group aspect-[4/5]">
                 <div className="absolute inset-0">
-                  <img src="/subash-leader.jpg" alt="Mr. Subash Nediyodath" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                  <img src="/leader-portrait.jpg" alt="Mr. Subash Nediyodath" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10" />
-                <div className="absolute inset-0 bg-gradient-to-r from-background/60 to-background/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/45 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-background/50 to-transparent" />
 
                 <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12 z-10">
                   <div className="mb-8">
                     <div className="inline-block mb-4">
                       <p className="text-xs text-accent font-semibold uppercase tracking-[0.25em] bg-accent/20 border border-accent/40 rounded-full px-4 py-2">Leadership</p>
                     </div>
-                    <h3 className="font-serif-display text-4xl md:text-5xl font-bold text-foreground mb-3">Mr. Subash Nediyodath</h3>
+                    <h3 className="font-serif-display text-3xl md:text-4xl font-bold text-foreground mb-3">Mr. Subash Nediyodath</h3>
                     <p className="text-lg text-foreground/90 font-medium">Senior Precious Metals & Operations Expert</p>
                   </div>
 

@@ -25,7 +25,7 @@ const essentialEquipment = [
     description: "High-precision weighing and hydrostatic density measurements"
   },
   {
-    name: "ICP-OES Instrument",
+    name: "ICP-OES – Potentiometric Titration",
     description: "Advanced wet-chemistry analysis for trace elements and alloying elements"
   },
   {

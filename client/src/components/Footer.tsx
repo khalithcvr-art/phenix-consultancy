@@ -6,7 +6,7 @@ const serviceLinks = [
   { label: "Procurement Consulting", href: "/services/procurement-consulting" },
   { label: "Process Optimization", href: "/services/process-optimization" },
   { label: "Laboratory Setup", href: "/services/laboratory-setup" },
-  { label: "ICP-OES Training", href: "/services/icp-training" },
+  { label: "ICP-OES Instrument Training", href: "/services/icp-training" },
   { label: "World-class Standards", href: "/services/world-class-standards" },
 ];
 
