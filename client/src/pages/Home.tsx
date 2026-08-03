@@ -213,10 +213,10 @@ const methodology = [
 
 const certifications = [
   { code: "ISO 17025", label: "Laboratory Accreditation Support" },
-  { code: "LBMA", label: "Good Delivery Standards" },
+  { code: "LBMA", label: "Delivery Standards Support" },
   { code: "ICP-OES", label: "Validated Analysis Methods" },
   { code: "AU 999.9", label: "Refined Gold Benchmarks" },
-  { code: "AG 999.0", label: "Fine Silver Benchmarks" },
+  { code: "AG 999.9", label: "Fine Silver Benchmarks" },
   { code: "RJC CoC", label: "Chain of Custody Alignment" },
 ];
 
