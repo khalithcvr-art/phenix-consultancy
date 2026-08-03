@@ -142,7 +142,7 @@ export default function ICPTraining() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid gap-8 max-w-2xl">
             <Reveal flip>
             <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300 h-full">
               <h3 className="text-2xl font-bold text-foreground mb-6">Practical Drills</h3>
@@ -166,30 +166,6 @@ export default function ICPTraining() {
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
                   <span className="text-foreground/80">Perform performance check and calculate MDL</span>
-                </li>
-              </ul>
-            </div>
-            </Reveal>
-
-            <Reveal delay={150} flip>
-            <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300 h-full">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Assessment</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
-                  <span className="text-foreground/80">Short quizzes after theory modules</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
-                  <span className="text-foreground/80">Practical competency checklist & sign-off</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
-                  <span className="text-foreground/80">Final practical test (run unknowns, produce report)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
-                  <span className="text-foreground/80">Professional competency certificate</span>
                 </li>
               </ul>
             </div>
