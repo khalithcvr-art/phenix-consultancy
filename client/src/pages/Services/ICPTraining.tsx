@@ -62,7 +62,7 @@ export default function ICPTraining() {
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-              ICP-OES Training & <span className="text-accent">Technical Staff Development</span>
+              ICP-OES Instrument Training & <span className="text-accent">Technical Staff Development</span>
             </h1>
             <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
               Practical training programs that strengthen operator capability, laboratory reliability, and long-term technical independence. Build competent teams that run, maintain, troubleshoot, and validate ICP-OES methods reliably.
