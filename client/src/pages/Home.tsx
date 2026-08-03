@@ -193,7 +193,7 @@ const expertiseData = [
 ];
 
 const impactStats = [
-  { value: 16, suffix: "+", label: "Years of Industry Experience" },
+  { value: 14, suffix: "+", label: "Years of Industry Experience" },
   { value: 40, suffix: "+", label: "Projects Delivered" },
   { value: 10, suffix: "+", label: "Countries Served" },
   { value: 98, suffix: "%", label: "Client Satisfaction" },
@@ -746,7 +746,7 @@ export default function Home() {
 
                   <div className="glass rounded-2xl p-6 border border-accent/30">
                     <div className="flex items-center gap-6">
-                      <RingStat value={16} suffix="+" size={90} />
+                      <RingStat value={14} suffix="+" size={90} />
                       <div>
                         <p className="text-sm text-foreground/70 leading-relaxed">Years of relevant industry experience in refinery operations, laboratory systems, and process optimization</p>
                       </div>
@@ -760,7 +760,7 @@ export default function Home() {
               <div className="space-y-8">
                 <div>
                   <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Experience that connects technical decisions with business outcomes.</h2>
-                  <p className="text-lg text-foreground/70 leading-relaxed">With 16 years of proven expertise, Mr. Subash Nediyodath brings deep practical understanding of precious metal refinery operations, laboratory systems, procurement evaluation, technical troubleshooting, staff training, and performance improvement.</p>
+                  <p className="text-lg text-foreground/70 leading-relaxed">With 14 years of proven expertise, Mr. Subash Nediyodath brings deep practical understanding of precious metal refinery operations, laboratory systems, procurement evaluation, technical troubleshooting, staff training, and performance improvement.</p>
                 </div>
 
                 <div className="glass rounded-2xl p-8 border border-border/40">
