@@ -728,19 +728,19 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <Reveal>
-              <div className="relative rounded-3xl overflow-hidden group h-[500px] md:h-[550px]">
+              <div className="relative rounded-3xl overflow-hidden group aspect-[4/5]">
                 <div className="absolute inset-0">
-                  <img src="/subash-leader.jpg" alt="Mr. Subash Nediyodath" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                  <img src="/leader-portrait.jpg" alt="Mr. Subash Nediyodath" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/10" />
-                <div className="absolute inset-0 bg-gradient-to-r from-background/60 to-background/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/45 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-background/50 to-transparent" />
 
                 <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12 z-10">
                   <div className="mb-8">
                     <div className="inline-block mb-4">
                       <p className="text-xs text-accent font-semibold uppercase tracking-[0.25em] bg-accent/20 border border-accent/40 rounded-full px-4 py-2">Leadership</p>
                     </div>
-                    <h3 className="font-serif-display text-4xl md:text-5xl font-bold text-foreground mb-3">Mr. Subash Nediyodath</h3>
+                    <h3 className="font-serif-display text-3xl md:text-4xl font-bold text-foreground mb-3">Mr. Subash Nediyodath</h3>
                     <p className="text-lg text-foreground/90 font-medium">Senior Precious Metals & Operations Expert</p>
                   </div>
 
