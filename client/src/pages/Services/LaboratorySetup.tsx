@@ -25,7 +25,7 @@ const essentialEquipment = [
     description: "High-precision weighing and hydrostatic density measurements"
   },
   {
-    name: "ICP-OES – Potentiometric Titration",
+    name: "Potentiometric Titration",
     description: "Advanced wet-chemistry analysis for trace elements and alloying elements"
   },
   {
@@ -45,7 +45,7 @@ const roadmapSteps = [
   },
   {
     step: "2. Choose Methods",
-    detail: "XRF for speed, fire assay for reference results, ICP for advanced analysis"
+    detail: "XRF for speed, fire assay for reference results, and wet chemistry for advanced analysis"
   },
   {
     step: "3. Build Safety First",
@@ -168,7 +168,7 @@ export default function LaboratorySetup() {
               Essential Lab Equipment & Setup
             </h2>
             <p className="text-lg text-foreground/70 max-w-3xl">
-              Modern precious metals labs combine non-destructive screening (XRF) with reference-grade assay methods (fire assay, ICP-OES) to deliver fast, accurate results with proven traceability.
+              Modern precious metals labs combine non-destructive screening (XRF) with reference-grade assay methods (fire assay, wet chemistry) to deliver fast, accurate results with proven traceability.
             </p>
           </div>
 
@@ -224,7 +224,7 @@ export default function LaboratorySetup() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
-                  <span className="text-foreground/80"><strong>Instruments:</strong> XRF, ICP-OES in dedicated, climate-controlled spaces</span>
+                  <span className="text-foreground/80"><strong>Instruments:</strong> XRF and wet-chemistry stations in dedicated, climate-controlled spaces</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { ArrowRight, Zap, Users, Shield, Target, Star, CircleCheck as CheckCircle2, Award, FlaskConical, TrendingUp, ClipboardList, GraduationCap, Trophy, Menu, X, Check } from "lucide-react";
+import { ArrowRight, Zap, Users, Shield, Target, Star, CircleCheck as CheckCircle2, Award, FlaskConical, TrendingUp, ClipboardList, Trophy, Menu, X, Check } from "lucide-react";
 
 const reducedMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -188,7 +188,6 @@ const expertiseData = [
   { title: "Procurement Consulting & Technical Evaluation", description: "Vendor review, equipment selection, specification comparison, calibration standards procurement, and investment-grade purchasing support.", Icon: CheckCircle2, href: "/services/procurement-consulting", backgroundImage: "https://i.pinimg.com/1200x/b7/7a/42/b77a4264911d8cd2e5756fb1eed222f0.jpg" },
   { title: "Production & Chemical Process Optimization", description: "Production process planning, chemical process improvement, troubleshooting, and operational performance enhancement for existing refineries.", Icon: TrendingUp, href: "/services/process-optimization", backgroundImage: "https://i.pinimg.com/1200x/6f/a4/29/6fa4292bbb6bf17e3e2b1196d5d78cbb.jpg" },
   { title: "Laboratory Setup & Development", description: "Laboratory planning, standard practices, ISO method validation, reference material production, and reliable analytical workflows.", Icon: FlaskConical, href: "/services/laboratory-setup", backgroundImage: "https://i.pinimg.com/1200x/a3/e5/d3/a3e5d31ecc67efdf9f1c38fa2ee0c37c.jpg" },
-  { title: "ICP-OES Instrument Training & Technical Staff Development", description: "Practical training programs that strengthen operator capability, laboratory reliability, and long-term technical independence.", Icon: GraduationCap, href: "/services/icp-training", backgroundImage: "https://i.pinimg.com/1200x/8f/02/b2/8f02b2008406456dd233615919349495.jpg" },
   { title: "World-class Standards & Continuous Improvement", description: "Tailor-made consulting for reliable operations, cost-effective solutions, and refinery systems built for sustainable growth.", Icon: Trophy, href: "/services/world-class-standards", backgroundImage: "https://i.pinimg.com/1200x/70/f2/f5/70f2f5abcbfcd8ca5186ff466debf1bd.jpg" },
 ];
 
@@ -214,7 +213,6 @@ const methodology = [
 const certifications = [
   { code: "ISO 17025", label: "Laboratory Accreditation Support" },
   { code: "LBMA", label: "Delivery Standards Support" },
-  { code: "ICP-OES", label: "Validated Analysis Methods" },
   { code: "AU 999.9", label: "Refined Gold Benchmarks" },
   { code: "AG 999.9", label: "Fine Silver Benchmarks" },
   { code: "RJC CoC", label: "Chain of Custody Alignment" },
