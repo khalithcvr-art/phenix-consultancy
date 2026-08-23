@@ -45,14 +45,14 @@ export default function InstrumentTraining() {
           <div
             className="w-full h-full opacity-100 transition-opacity duration-1200"
             style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1576086213369-97a306d36557?w=2000&q=95')",
+              backgroundImage: "url('https://i.pinimg.com/736x/61/34/76/6134766e3b3b19a797dd292bb1216a58.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundAttachment: "fixed"
             }}
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-background/40 z-1" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent z-1" />
 
         <div className="container relative z-10 mx-auto">
           <div className="max-w-3xl mb-8">
