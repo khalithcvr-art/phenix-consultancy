@@ -468,7 +468,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="kenburns w-full h-full opacity-100" style={{ backgroundImage: "url('https://phenix-consultancy.vercel.app/assets/hero_background.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
+          <div className="kenburns w-full h-full opacity-100" style={{ backgroundImage: "url('/hero-background.jpg')", backgroundSize: "cover", backgroundPosition: "center" }} />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/20" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
         </div>
