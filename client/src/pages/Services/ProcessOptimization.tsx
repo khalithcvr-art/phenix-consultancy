@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CircleCheck as CheckCircle, Zap, TrendingUp, Target } from "lucide-react";
+import { ArrowRight, Zap, TrendingUp, Target } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import Footer from "@/components/Footer";
 
@@ -235,64 +235,6 @@ export default function ProcessOptimization() {
                 <li>• Kinetics data generation</li>
                 <li>• Scale-up simulation</li>
               </ul>
-            </div>
-          </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <div className="gold-divider" />
-
-      {/* Example Case */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=1600&q=95" alt="Real-World Example" className="w-full h-full object-cover opacity-100" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
-        </div>
-
-        <div className="container mx-auto relative z-10">
-          <Reveal>
-            <div className="mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Real-World Example
-              </h2>
-            </div>
-          </Reveal>
-
-          <Reveal delay={120} flip>
-          <div className="bg-card/80 border border-accent/30 rounded-lg p-8 md:p-12">
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">Gold Refining Recovery Challenge</h3>
-                <p className="text-foreground/80 leading-relaxed">
-                  Baseline recovery: 85% | Known issue: losses from coarse floating particles and fine slimes
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="flex items-start gap-4">
-                  <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-bold text-foreground mb-1">Investigation</h4>
-                    <p className="text-sm text-foreground/70">Split tail sampling by size fraction, liberation tests, surface analysis</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-bold text-foreground mb-1">Optimization</h4>
-                    <p className="text-sm text-foreground/70">Tune grinding/classification, add scavenger stage, optimize residence time</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-bold text-foreground mb-1">Results</h4>
-                    <p className="text-sm text-foreground/70">3–7% recovery uplift, lower reagent consumption per oz, reduced tails</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           </Reveal>

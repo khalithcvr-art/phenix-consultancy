@@ -19,7 +19,7 @@ const staffRoles = [
   }
 ];
 
-export default function ICPTraining() {
+export default function InstrumentTraining() {
   return (
     <div className="min-h-screen bg-background text-foreground page-enter">
       {/* Navigation */}
@@ -45,14 +45,14 @@ export default function ICPTraining() {
           <div
             className="w-full h-full opacity-100 transition-opacity duration-1200"
             style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1576086213369-97a306d36557?w=2000&q=95')",
+              backgroundImage: "url('https://i.pinimg.com/736x/61/34/76/6134766e3b3b19a797dd292bb1216a58.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundAttachment: "fixed"
             }}
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-background/40 z-1" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent z-1" />
 
         <div className="container relative z-10 mx-auto">
           <div className="max-w-3xl mb-8">
@@ -62,10 +62,10 @@ export default function ICPTraining() {
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-              ICP-OES Training & <span className="text-accent">Technical Staff Development</span>
+              Instrument Training & <span className="text-accent">Technical Staff Development</span>
             </h1>
             <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
-              Practical training programs that strengthen operator capability, laboratory reliability, and long-term technical independence. Build competent teams that run, maintain, troubleshoot, and validate ICP-OES methods reliably.
+              Practical training programs that strengthen operator capability, laboratory reliability, and long-term technical independence. Build competent teams that run, maintain, troubleshoot, and validate analytical instrument methods reliably.
             </p>
           </div>
         </div>
@@ -115,7 +115,6 @@ export default function ICPTraining() {
                 <li>✓ Method development and optimization skills</li>
                 <li>✓ Interference recognition and correction</li>
                 <li>✓ Routine QC and performance monitoring</li>
-                <li>✓ Professional competency certification</li>
               </ul>
             </div>
             </Reveal>
@@ -142,7 +141,7 @@ export default function ICPTraining() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid gap-8 max-w-2xl">
             <Reveal flip>
             <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300 h-full">
               <h3 className="text-2xl font-bold text-foreground mb-6">Practical Drills</h3>
@@ -166,30 +165,6 @@ export default function ICPTraining() {
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
                   <span className="text-foreground/80">Perform performance check and calculate MDL</span>
-                </li>
-              </ul>
-            </div>
-            </Reveal>
-
-            <Reveal delay={150} flip>
-            <div className="bg-card/50 border border-border/30 rounded-lg p-8 hover:border-accent/50 hover:bg-card/80 transition-all duration-300 h-full">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Assessment</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
-                  <span className="text-foreground/80">Short quizzes after theory modules</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
-                  <span className="text-foreground/80">Practical competency checklist & sign-off</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
-                  <span className="text-foreground/80">Final practical test (run unknowns, produce report)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
-                  <span className="text-foreground/80">Professional competency certificate</span>
                 </li>
               </ul>
             </div>
@@ -364,7 +339,7 @@ export default function ICPTraining() {
               Build a trained, competent team
             </h2>
             <p className="text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Phenix Consultancy designs and delivers customized ICP-OES training programs that build operator confidence, lab reliability, and technical independence for your team.
+              Phenix Consultancy designs and delivers customized instrument training programs that build operator confidence, lab reliability, and technical independence for your team.
             </p>
             <Button asChild className="group bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-base font-semibold rounded-lg transition-all hover:scale-105 active:scale-95">
               <a href="/#contact">Design Training Program <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" /></a>
