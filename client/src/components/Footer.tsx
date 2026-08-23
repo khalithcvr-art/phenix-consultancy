@@ -6,6 +6,7 @@ const serviceLinks = [
   { label: "Procurement Consulting", href: "/services/procurement-consulting" },
   { label: "Process Optimization", href: "/services/process-optimization" },
   { label: "Laboratory Setup", href: "/services/laboratory-setup" },
+  { label: "Instrument Training", href: "/services/instrument-training" },
   { label: "World-class Standards", href: "/services/world-class-standards" },
 ];
 

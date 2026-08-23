@@ -9,6 +9,7 @@ import ProjectManagement from "./pages/Services/ProjectManagement";
 import ProcurementConsulting from "./pages/Services/ProcurementConsulting";
 import ProcessOptimization from "./pages/Services/ProcessOptimization";
 import LaboratorySetup from "./pages/Services/LaboratorySetup";
+import InstrumentTraining from "./pages/Services/InstrumentTraining";
 import WorldclassStandards from "./pages/Services/WorldclassStandards";
 import WhatsAppButton from "./components/WhatsAppButton";
 
@@ -21,6 +22,7 @@ function Router() {
       <Route path={"/services/procurement-consulting"} component={ProcurementConsulting} />
       <Route path={"/services/process-optimization"} component={ProcessOptimization} />
       <Route path={"/services/laboratory-setup"} component={LaboratorySetup} />
+      <Route path={"/services/instrument-training"} component={InstrumentTraining} />
       <Route path={"/services/world-class-standards"} component={WorldclassStandards} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
