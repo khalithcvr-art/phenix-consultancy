@@ -115,7 +115,6 @@ export default function InstrumentTraining() {
                 <li>✓ Method development and optimization skills</li>
                 <li>✓ Interference recognition and correction</li>
                 <li>✓ Routine QC and performance monitoring</li>
-                <li>✓ Professional competency certification</li>
               </ul>
             </div>
             </Reveal>
