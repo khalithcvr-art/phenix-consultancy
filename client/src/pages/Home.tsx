@@ -232,11 +232,10 @@ const skills = [["Refinery Operations", 95], ["Laboratory Systems", 92], ["Procu
 
 const testimonials = [
   { quote: "Phenix Consultancy impressed us with their professionalism, commercial insight, and meticulous approach — translating complex operational and procurement requirements into practical solutions and managing every stage with clarity and sound judgment. Responsive, reliable, and proactive, they are a consultancy partner we confidently recommend.", name: "Bilnd Sabah", title: "Managing Director", company: "Bawan Gold Precious Metals Refinery" },
+  { quote: "We really appreciate your expert guidance and steady support throughout the gold refinery project. Your work made a real difference, and we're honestly grateful.", name: "Jerish NK", title: "Managing Director", company: "Quality Assayers & Refiners, Kozhikode, Kerala" },
   { quote: "Phenix Consultancy transformed our refinery operations. Their expertise in process optimization increased our yield by 18% within six months. Highly professional and results-driven.", name: "David Chen", title: "Director of Operations", company: "Global Bullion Refineries" },
   { quote: "Outstanding service and technical expertise. They identified critical inefficiencies in our lab operations and implemented solutions that improved accuracy and reduced costs significantly.", name: "Sarah Al-Farsi", title: "Chief Technical Officer", company: "Oasis Precious Metals" },
   { quote: "Phenix's team brought invaluable insights to our refinery project. Their attention to detail and commitment to excellence made all the difference in our success.", name: "Marcus Thorne", title: "Production Manager", company: "Sterling Silver Industrial" },
-  { quote: "Phenix's technical validation was the key to our ISO 17025 accreditation. Their precision and attention to detail are unmatched in the industry.", name: "Elena Rossi", title: "CTO", company: "Alpine Assay Labs" },
-  { quote: "The efficiency gains we've seen since implementing Phenix's process optimizations have directly impacted our bottom line. Truly a world-class consultancy.", name: "Ahmed Al-Mansoori", title: "Managing Director", company: "Emirates Precious Metals" },
 ];
 
 const navLinks = [
